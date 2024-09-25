@@ -1,0 +1,13 @@
+{
+    "BuildConfigs": [
+        {
+            "Name": "Debug",
+            "OutputDirectories": ["build/Debug/"]
+        },
+        
+        {
+            "Name": "Release",
+            "OutputDirectories": ["build/Release/"]
+        }
+    ]
+}

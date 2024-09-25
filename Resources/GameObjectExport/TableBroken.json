@@ -1,0 +1,2982 @@
+{
+  "Meta": {
+    "RootUUIDs": [
+      "4a9c5c15ca9671de00000b2ce4661000"
+    ],
+    "UsedClassNames": [
+      "GameObject",
+      "RigidBodyDynamic",
+      "PhysicsShapeBox",
+      "PhysicsMaterial",
+      "D6Joint",
+      "MeshBasicRenderer",
+      "class soft::Model3D",
+      "class soft::Texture2D",
+      "class soft::Texture2D"
+    ]
+  },
+  "Objects": [
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [
+          "4d6c5c15ca9671de000003d9f2967000",
+          "30695c15ca9671de00000b276192b000",
+          "73e05c15ca9671de000002aa9fb95000",
+          "ccb85c15ca9671de000002fe28887000",
+          "e3d15c15ca9671de0000066a572ce000",
+          "3f6a5c15ca9671de000001f0dbb4f000",
+          "51885c15ca9671de00000f5439899000",
+          "71bb5c15ca9671de000008c3315b6000"
+        ],
+        "GlobalTransformMat": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.004999999888241291,
+            0.0,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            -0.004999999888241291,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MainComponents": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Table_0",
+        "TransformConstraint": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "4a9c5c15ca9671de00000b2ce4661000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [
+          "e6845c15ca9671de000002d912257000",
+          "b8245c15ca9671de000004ce658d0000"
+        ],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.0,
+            1.0251758098602295,
+            0.0,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            1.030175805091858,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          null,
+          "4feb5c15ca9671de000007aa89bcc000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Platte",
+        "TransformConstraint": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "4d6c5c15ca9671de000003d9f2967000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [
+          "8b055c15ca9671de0000090575b10000",
+          "58cd5c15ca9671de00000c0f5f758000",
+          "c7655c15ca9671de000005329aa4b000",
+          "ab1f5c15ca9671de00000aeaa77a2000"
+        ],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 9.239999771118164,
+        "MassSpaceInertiaTensor": [
+          3.729572296142578,
+          5.236000061035156,
+          1.5119719505310059
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "52de5c15ca9671de000004cda6ec9000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "4feb5c15ca9671de000007aa89bcc000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          1.399999976158142,
+          0.05999999865889549,
+          2.200000047683716
+        ],
+        "FilterFlags": 4,
+        "Meterial": "54895c15ca9671de000005ca85bde000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "52de5c15ca9671de000004cda6ec9000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "54895c15ca9671de000005ca85bde000"
+    },
+    {
+      "ClassName": "D6Joint",
+      "Data": {
+        "Body0": "4feb5c15ca9671de000007aa89bcc000",
+        "Body1": "839f5c15ca9671de000001e7bdce4000",
+        "DistanceLimit": {
+          "BounceThreshold": 0.0,
+          "Damping": 0.0,
+          "Distance": 3.4028234663852886e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0
+        },
+        "DriveAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DriveLimitSlerp": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitSwing": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitTwist": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitX": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitY": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitZ": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DrivePosition": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe0": {
+          "position": [
+            -0.5479999780654907,
+            -0.01117563247680664,
+            -0.9020000100135803
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.7075322866439819,
+            0.7066810727119446
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe1": {
+          "position": [
+            0.0020000338554382324,
+            0.4890003204345703,
+            -0.0020000338554382324
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.7075322866439819,
+            0.7066810727119446
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MotionXLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionXType": 0,
+        "MotionYLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionYType": 0,
+        "MotionZLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionZType": 0,
+        "SwingLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "YLimitAngle": 0.10000000149011612,
+          "ZLimitAngle": 0.10000000149011612
+        },
+        "SwingYType": 1,
+        "SwingZType": 1,
+        "TwistLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "LowerLimit": -1.5707963705062866,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "UpperLimit": 1.5707963705062866
+        },
+        "TwistXType": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "8b055c15ca9671de0000090575b10000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [
+          "8b055c15ca9671de0000090575b10000",
+          "825d5c15ca9671de00000b9c232c6000"
+        ],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 0.5000000596046448,
+        "MassSpaceInertiaTensor": [
+          0.04208333417773247,
+          0.00083333341171965,
+          0.04208333417773247
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "85265c15ca9671de00000c7d4ccc1000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "839f5c15ca9671de000001e7bdce4000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          0.10000000149011612,
+          1.0,
+          0.10000000149011612
+        ],
+        "FilterFlags": 4,
+        "Meterial": "869d5c15ca9671de00000587b971e000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "85265c15ca9671de00000c7d4ccc1000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "869d5c15ca9671de00000587b971e000"
+    },
+    {
+      "ClassName": "D6Joint",
+      "Data": {
+        "Body0": "839f5c15ca9671de000001e7bdce4000",
+        "Body1": "65885c15ca9671de00000dd39f1a6000",
+        "DistanceLimit": {
+          "BounceThreshold": 0.0,
+          "Damping": 0.0,
+          "Distance": 3.4028234663852886e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0
+        },
+        "DriveAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DriveLimitSlerp": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitSwing": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitTwist": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitX": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitY": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitZ": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DrivePosition": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe0": {
+          "position": [
+            0.05300000309944153,
+            0.2980000972747803,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe1": {
+          "position": [
+            -0.4970000088214874,
+            -0.002000093460083008,
+            -0.0058596134185791016
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MotionXLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionXType": 0,
+        "MotionYLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionYType": 0,
+        "MotionZLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionZType": 0,
+        "SwingLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "YLimitAngle": 0.20000000298023224,
+          "ZLimitAngle": 0.20000000298023224
+        },
+        "SwingYType": 1,
+        "SwingZType": 1,
+        "TwistLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "LowerLimit": -1.5707963705062866,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "UpperLimit": 1.5707963705062866
+        },
+        "TwistXType": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "825d5c15ca9671de00000b9c232c6000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [
+          "6bf85c15ca9671de00000c6b8f724000",
+          "825d5c15ca9671de00000b9c232c6000",
+          "63605c15ca9671de0000079649ed1000"
+        ],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 1.0,
+        "MassSpaceInertiaTensor": [
+          0.1666666716337204,
+          0.1666666716337204,
+          0.1666666716337204
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "66f35c15ca9671de00000986fc35a000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "65885c15ca9671de00000dd39f1a6000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          1.0,
+          0.10000000149011612,
+          0.10000000149011612
+        ],
+        "FilterFlags": 4,
+        "Meterial": "68795c15ca9671de00000e50fd1a0000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "66f35c15ca9671de00000986fc35a000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "68795c15ca9671de00000e50fd1a0000"
+    },
+    {
+      "ClassName": "D6Joint",
+      "Data": {
+        "Body0": "6d285c15ca9671de00000dbe171f8000",
+        "Body1": "65885c15ca9671de00000dd39f1a6000",
+        "DistanceLimit": {
+          "BounceThreshold": 0.0,
+          "Damping": 0.0,
+          "Distance": 3.4028234663852886e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0
+        },
+        "DriveAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DriveLimitSlerp": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitSwing": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitTwist": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitX": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitY": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitZ": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DrivePosition": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe0": {
+          "position": [
+            0.0,
+            0.0,
+            -0.8960000276565552
+          ],
+          "rotation": [
+            0.0,
+            -0.7075322866439819,
+            0.0,
+            0.7066810727119446
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe1": {
+          "position": [
+            0.0,
+            0.0,
+            -0.0018596649169921875
+          ],
+          "rotation": [
+            0.0,
+            -0.7075322866439819,
+            0.0,
+            0.7066810727119446
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MotionXLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionXType": 0,
+        "MotionYLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionYType": 0,
+        "MotionZLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionZType": 0,
+        "SwingLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "YLimitAngle": 0.009999999776482582,
+          "ZLimitAngle": 0.009999999776482582
+        },
+        "SwingYType": 1,
+        "SwingZType": 1,
+        "TwistLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "LowerLimit": -1.5707963705062866,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "UpperLimit": 1.5707963705062866
+        },
+        "TwistXType": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "6bf85c15ca9671de00000c6b8f724000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [
+          "6bf85c15ca9671de00000c6b8f724000"
+        ],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 1.0,
+        "MassSpaceInertiaTensor": [
+          0.1666666716337204,
+          0.1666666716337204,
+          0.1666666716337204
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "6ea05c15ca9671de00000c74310f6000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "6d285c15ca9671de00000dbe171f8000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          0.10000000149011612,
+          0.10000000149011612,
+          1.7999999523162842
+        ],
+        "FilterFlags": 4,
+        "Meterial": "70345c15ca9671de000007e8cf316000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "6ea05c15ca9671de00000c74310f6000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "70345c15ca9671de000007e8cf316000"
+    },
+    {
+      "ClassName": "D6Joint",
+      "Data": {
+        "Body0": "5b985c15ca9671de00000fc5e5cba000",
+        "Body1": "65885c15ca9671de00000dd39f1a6000",
+        "DistanceLimit": {
+          "BounceThreshold": 0.0,
+          "Damping": 0.0,
+          "Distance": 3.4028234663852886e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0
+        },
+        "DriveAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DriveLimitSlerp": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitSwing": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitTwist": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitX": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitY": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitZ": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DrivePosition": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe0": {
+          "position": [
+            -0.05300000309944153,
+            0.2980000972747803,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            1.0,
+            -4.63287033198867e-05
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe1": {
+          "position": [
+            0.4970000088214874,
+            -0.002000093460083008,
+            -0.0058596134185791016
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            1.0,
+            -4.63287033198867e-05
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MotionXLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionXType": 0,
+        "MotionYLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionYType": 0,
+        "MotionZLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionZType": 0,
+        "SwingLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "YLimitAngle": 0.20000000298023224,
+          "ZLimitAngle": 0.20000000298023224
+        },
+        "SwingYType": 1,
+        "SwingZType": 1,
+        "TwistLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "LowerLimit": -1.5707963705062866,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "UpperLimit": 1.5707963705062866
+        },
+        "TwistXType": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "63605c15ca9671de0000079649ed1000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [
+          "63605c15ca9671de0000079649ed1000",
+          "58cd5c15ca9671de00000c0f5f758000"
+        ],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 1.0,
+        "MassSpaceInertiaTensor": [
+          0.1666666716337204,
+          0.1666666716337204,
+          0.1666666716337204
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "5d2e5c15ca9671de000009da08762000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "5b985c15ca9671de00000fc5e5cba000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          0.10000000149011612,
+          1.0,
+          0.10000000149011612
+        ],
+        "FilterFlags": 4,
+        "Meterial": "5ea85c15ca9671de0000078edb86f000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "5d2e5c15ca9671de000009da08762000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "5ea85c15ca9671de0000078edb86f000"
+    },
+    {
+      "ClassName": "D6Joint",
+      "Data": {
+        "Body0": "4feb5c15ca9671de000007aa89bcc000",
+        "Body1": "5b985c15ca9671de00000fc5e5cba000",
+        "DistanceLimit": {
+          "BounceThreshold": 0.0,
+          "Damping": 0.0,
+          "Distance": 3.4028234663852886e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0
+        },
+        "DriveAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DriveLimitSlerp": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitSwing": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitTwist": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitX": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitY": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitZ": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DrivePosition": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe0": {
+          "position": [
+            0.546999990940094,
+            -0.01117563247680664,
+            -0.9020000100135803
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.7075322866439819,
+            0.7066810727119446
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe1": {
+          "position": [
+            -0.003000020980834961,
+            0.4890003204345703,
+            -0.0020000338554382324
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.7075322866439819,
+            0.7066810727119446
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MotionXLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionXType": 0,
+        "MotionYLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionYType": 0,
+        "MotionZLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionZType": 0,
+        "SwingLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "YLimitAngle": 0.10000000149011612,
+          "ZLimitAngle": 0.10000000149011612
+        },
+        "SwingYType": 1,
+        "SwingZType": 1,
+        "TwistLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "LowerLimit": -1.5707963705062866,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "UpperLimit": 1.5707963705062866
+        },
+        "TwistXType": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "58cd5c15ca9671de00000c0f5f758000"
+    },
+    {
+      "ClassName": "D6Joint",
+      "Data": {
+        "Body0": "4feb5c15ca9671de000007aa89bcc000",
+        "Body1": "c0045c15ca9671de0000094b18121000",
+        "DistanceLimit": {
+          "BounceThreshold": 0.0,
+          "Damping": 0.0,
+          "Distance": 3.4028234663852886e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0
+        },
+        "DriveAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DriveLimitSlerp": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitSwing": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitTwist": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitX": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitY": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitZ": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DrivePosition": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe0": {
+          "position": [
+            -0.5479999780654907,
+            -0.01117563247680664,
+            0.8999999761581421
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.7075322866439819,
+            0.7066810727119446
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe1": {
+          "position": [
+            0.0020000338554382324,
+            0.4890003204345703,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.7075322866439819,
+            0.7066810727119446
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MotionXLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionXType": 0,
+        "MotionYLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionYType": 0,
+        "MotionZLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionZType": 0,
+        "SwingLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "YLimitAngle": 0.10000000149011612,
+          "ZLimitAngle": 0.10000000149011612
+        },
+        "SwingYType": 1,
+        "SwingZType": 1,
+        "TwistLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "LowerLimit": -1.5707963705062866,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "UpperLimit": 1.5707963705062866
+        },
+        "TwistXType": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "c7655c15ca9671de000005329aa4b000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [
+          "c7655c15ca9671de000005329aa4b000",
+          "be155c15ca9671de000006db12d10000"
+        ],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 1.0,
+        "MassSpaceInertiaTensor": [
+          0.1666666716337204,
+          0.1666666716337204,
+          0.1666666716337204
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "c18d5c15ca9671de00000d8f35855000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "c0045c15ca9671de0000094b18121000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          0.10000000149011612,
+          1.0,
+          0.10000000149011612
+        ],
+        "FilterFlags": 4,
+        "Meterial": "c30d5c15ca9671de00000af1fcf2c000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "c18d5c15ca9671de00000d8f35855000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "c30d5c15ca9671de00000af1fcf2c000"
+    },
+    {
+      "ClassName": "D6Joint",
+      "Data": {
+        "Body0": "c0045c15ca9671de0000094b18121000",
+        "Body1": "b6985c15ca9671de00000e2d7f355000",
+        "DistanceLimit": {
+          "BounceThreshold": 0.0,
+          "Damping": 0.0,
+          "Distance": 3.4028234663852886e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0
+        },
+        "DriveAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DriveLimitSlerp": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitSwing": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitTwist": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitX": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitY": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitZ": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DrivePosition": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe0": {
+          "position": [
+            0.05300000309944153,
+            0.2980000972747803,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe1": {
+          "position": [
+            -0.4970000088214874,
+            -0.002000093460083008,
+            0.0009115338325500488
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MotionXLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionXType": 0,
+        "MotionYLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionYType": 0,
+        "MotionZLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionZType": 0,
+        "SwingLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "YLimitAngle": 0.20000000298023224,
+          "ZLimitAngle": 0.20000000298023224
+        },
+        "SwingYType": 1,
+        "SwingZType": 1,
+        "TwistLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "LowerLimit": -1.5707963705062866,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "UpperLimit": 1.5707963705062866
+        },
+        "TwistXType": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "be155c15ca9671de000006db12d10000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [
+          "be155c15ca9671de000006db12d10000",
+          "b4725c15ca9671de00000bf630986000"
+        ],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 1.0,
+        "MassSpaceInertiaTensor": [
+          0.1666666716337204,
+          0.1666666716337204,
+          0.1666666716337204
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "b8245c15ca9671de000001f6260ac000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "b6985c15ca9671de00000e2d7f355000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          1.0,
+          0.10000000149011612,
+          0.10000000149011612
+        ],
+        "FilterFlags": 4,
+        "Meterial": "b9875c15ca9671de00000d85113c2000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "b8245c15ca9671de000001f6260ac000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "b9875c15ca9671de00000d85113c2000"
+    },
+    {
+      "ClassName": "D6Joint",
+      "Data": {
+        "Body0": "ad5e5c15ca9671de0000089af8291000",
+        "Body1": "b6985c15ca9671de00000e2d7f355000",
+        "DistanceLimit": {
+          "BounceThreshold": 0.0,
+          "Damping": 0.0,
+          "Distance": 3.4028234663852886e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0
+        },
+        "DriveAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DriveLimitSlerp": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitSwing": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitTwist": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitX": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitY": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitZ": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DrivePosition": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe0": {
+          "position": [
+            -0.05300000309944153,
+            0.2980000972747803,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            1.0,
+            -4.63287033198867e-05
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe1": {
+          "position": [
+            0.4970000088214874,
+            -0.002000093460083008,
+            0.0009115338325500488
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            1.0,
+            -4.63287033198867e-05
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MotionXLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionXType": 0,
+        "MotionYLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionYType": 0,
+        "MotionZLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionZType": 0,
+        "SwingLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "YLimitAngle": 0.20000000298023224,
+          "ZLimitAngle": 0.20000000298023224
+        },
+        "SwingYType": 1,
+        "SwingZType": 1,
+        "TwistLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "LowerLimit": -1.5707963705062866,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "UpperLimit": 1.5707963705062866
+        },
+        "TwistXType": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "b4725c15ca9671de00000bf630986000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [
+          "b4725c15ca9671de00000bf630986000",
+          "ab1f5c15ca9671de00000aeaa77a2000"
+        ],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 1.0,
+        "MassSpaceInertiaTensor": [
+          0.1666666716337204,
+          0.1666666716337204,
+          0.1666666716337204
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "af2c5c15ca9671de0000070c6386c000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "ad5e5c15ca9671de0000089af8291000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          0.10000000149011612,
+          1.0,
+          0.10000000149011612
+        ],
+        "FilterFlags": 4,
+        "Meterial": "b0975c15ca9671de00000a957e947000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "af2c5c15ca9671de0000070c6386c000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "b0975c15ca9671de00000a957e947000"
+    },
+    {
+      "ClassName": "D6Joint",
+      "Data": {
+        "Body0": "4feb5c15ca9671de000007aa89bcc000",
+        "Body1": "ad5e5c15ca9671de0000089af8291000",
+        "DistanceLimit": {
+          "BounceThreshold": 0.0,
+          "Damping": 0.0,
+          "Distance": 3.4028234663852886e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0
+        },
+        "DriveAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DriveLimitSlerp": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitSwing": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitTwist": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitX": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitY": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLimitZ": {
+          "Damping": 0.0,
+          "ForceLimit": 3.4028234663852886e+38,
+          "IsAcceleration": false,
+          "Stiffness": 0.0
+        },
+        "DriveLinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DrivePosition": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe0": {
+          "position": [
+            0.5479999780654907,
+            -0.01117563247680664,
+            0.9020000100135803
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.7075322866439819,
+            0.7066810727119446
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Localframe1": {
+          "position": [
+            -0.0020000338554382324,
+            0.4890003204345703,
+            0.0020000338554382324
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.7075322866439819,
+            0.7066810727119446
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MotionXLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionXType": 0,
+        "MotionYLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionYType": 0,
+        "MotionZLimit": {
+          "BounceThreshold": 2.0,
+          "Damping": 0.0,
+          "Lower": -1.1342744887950962e+38,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "Upper": 1.1342744887950962e+38
+        },
+        "MotionZType": 0,
+        "SwingLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "YLimitAngle": 0.10000000149011612,
+          "ZLimitAngle": 0.10000000149011612
+        },
+        "SwingYType": 1,
+        "SwingZType": 1,
+        "TwistLimit": {
+          "BounceThreshold": 0.5,
+          "Damping": 0.0,
+          "LowerLimit": -1.5707963705062866,
+          "Restitution": 0.0,
+          "Stiffness": 0.0,
+          "UpperLimit": 1.5707963705062866
+        },
+        "TwistXType": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "ab1f5c15ca9671de00000aeaa77a2000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.0,
+            1.0251758098602295,
+            0.0,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MainComponents": [
+          "e8e35c15ca9671de0000057e0a293000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "",
+        "TransformConstraint": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "e6845c15ca9671de000002d912257000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 3,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff000005f467abc000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "e8e35c15ca9671de0000057e0a293000"
+    },
+    {
+      "ClassName": "class soft::Model3D",
+      "Data": null,
+      "MemType": 3,
+      "UUID": "79ce5c15ca9671de00000989aba49000"
+    },
+    {
+      "ClassName": "class soft::Texture2D",
+      "Data": null,
+      "MemType": 3,
+      "UUID": "7fffffffffffffff000005f467abc000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.0,
+            1.0251758098602295,
+            0.0,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MainComponents": [
+          "bb285c15ca9671de000004d9e4e2b000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "",
+        "TransformConstraint": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "b8245c15ca9671de000004ce658d0000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 4,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff00000de3b1aad000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "bb285c15ca9671de000004d9e4e2b000"
+    },
+    {
+      "ClassName": "class soft::Texture2D",
+      "Data": null,
+      "MemType": 3,
+      "UUID": "7fffffffffffffff00000de3b1aad000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            -0.550000011920929,
+            0.5249999761581421,
+            -0.8999999761581421,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            -0.550000011920929,
+            0.5299999713897705,
+            -0.8999999761581421
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          "33925c15ca9671de0000078508fbb000",
+          "839f5c15ca9671de000001e7bdce4000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Bein",
+        "TransformConstraint": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "30695c15ca9671de00000b276192b000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 5,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff00000de3b1aad000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "33925c15ca9671de0000078508fbb000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.550000011920929,
+            0.5249999761581421,
+            -0.8999999761581421,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.550000011920929,
+            0.5299999713897705,
+            -0.8999999761581421
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          "769a5c15ca9671de00000672ca7d0000",
+          "5b985c15ca9671de00000fc5e5cba000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Bein_2",
+        "TransformConstraint": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "73e05c15ca9671de000002aa9fb95000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 6,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff00000de3b1aad000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "769a5c15ca9671de00000672ca7d0000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            -0.550000011920929,
+            0.5249999761581421,
+            0.8999999761581421,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            -0.550000011920929,
+            0.5299999713897705,
+            0.8999999761581421
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          "cf995c15ca9671de00000ce7b89b6000",
+          "c0045c15ca9671de0000094b18121000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Bein_3",
+        "TransformConstraint": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "ccb85c15ca9671de000002fe28887000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 7,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff00000de3b1aad000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "cf995c15ca9671de00000ce7b89b6000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.550000011920929,
+            0.5249999761581421,
+            0.8999999761581421,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.550000011920929,
+            0.5299999713897705,
+            0.8999999761581421
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          "e6285c15ca9671de00000d632a963000",
+          "ad5e5c15ca9671de0000089af8291000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Bein_4",
+        "TransformConstraint": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "e3d15c15ca9671de0000066a572ce000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 8,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff00000de3b1aad000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "e6285c15ca9671de00000d632a963000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.0,
+            0.8249999284744263,
+            0.899088442325592,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.8299999237060547,
+            0.899088442325592
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          "41ee5c15ca9671de00000a6fadbc2000",
+          "b6985c15ca9671de00000e2d7f355000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Bar",
+        "TransformConstraint": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "3f6a5c15ca9671de000001f0dbb4f000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 0,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff000005f467abc000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "41ee5c15ca9671de00000a6fadbc2000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.0,
+            0.8249999284744263,
+            -0.894140362739563,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.8299999237060547,
+            -0.894140362739563
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          "54525c15ca9671de00000835ca075000",
+          "65885c15ca9671de00000dd39f1a6000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Bar_2",
+        "TransformConstraint": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "51885c15ca9671de00000f5439899000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 1,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff000005f467abc000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "54525c15ca9671de00000835ca075000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.0,
+            0.8249999284744263,
+            0.0,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.8299999237060547,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          "74105c15ca9671de00000784b6756000",
+          "6d285c15ca9671de00000dbe171f8000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Bar_3",
+        "TransformConstraint": 0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "71bb5c15ca9671de000008c3315b6000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 2,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff000005f467abc000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "74105c15ca9671de00000784b6756000"
+    }
+  ],
+  "UsedResources": [
+    {
+      "Path": "Resources/model/static/furnitures/Table/Tabel/table.fbx",
+      "UUID": "79ce5c15ca9671de00000989aba49000"
+    },
+    {
+      "Path": "Resources/model/static/furnitures/Table/Tabel/tex/WoodSeemles1.jpg",
+      "UUID": "7fffffffffffffff000005f467abc000"
+    },
+    {
+      "Path": "Resources/model/static/furnitures/Table/Tabel/tex/WoodSeemles.jpg",
+      "UUID": "7fffffffffffffff00000de3b1aad000"
+    }
+  ]
+}

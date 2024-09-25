@@ -1,0 +1,122 @@
+[
+  {
+    "Path": "Resources/Default/sphere_lowpoly.obj",
+    "UUID": "f7705c15ca9671de00000c29c92f2000"
+  },
+  {
+    "Path": "Resources/model/Character/FallIdle.fbx|0",
+    "UUID": "42e85c15ca9671de00000f8776287000"
+  },
+  {
+    "Path": "Resources/model/Character/FallSoftLanding.fbx|0",
+    "UUID": "9c525c15ca9671de0000062a40505000"
+  },
+  {
+    "Path": "Resources/model/Character/IdleLeftTurn90.fbx|0",
+    "UUID": "4dd75c15ca9671de000007870a31e000"
+  },
+  {
+    "Path": "Resources/model/Character/Idle.fbx|0",
+    "UUID": "308d5c15ca9671de00000dedbe3d6000"
+  },
+  {
+    "Path": "Resources/model/Character/IdleRightTurn180.fbx|0",
+    "UUID": "b9315c15ca9671de000004bd59948000"
+  },
+  {
+    "Path": "Resources/model/Character/IdleJumpUp.fbx|0",
+    "UUID": "dadf5c15ca9671de00000403b7de3000"
+  },
+  {
+    "Path": "Resources/Default/cube1.obj",
+    "UUID": "11305c15ca9671de00000fba93f4d000"
+  },
+  {
+    "Path": "Resources/model/Character/IdleTurnLeftNoRotationCarefully.fbx|0",
+    "UUID": "42395c15ca9671de000000670b036000"
+  },
+  {
+    "Path": "Resources/model/Character/IdleCarefully.fbx",
+    "UUID": "367e5c15ca9671de00000c6a3af78000"
+  },
+  {
+    "Path": "Resources/model/Character/RunJumpInPlaceShort.fbx|0",
+    "UUID": "9d575c15ca9671de00000c9ce037e000"
+  },
+  {
+    "Path": "Resources/model/Character/RunJump.fbx|0",
+    "UUID": "16265c15ca9671de0000012643e88000"
+  },
+  {
+    "Path": "Resources/model/Character/HangMoveLeft.fbx|0",
+    "UUID": "0a505c15ca9671de00000cfcc510f000"
+  },
+  {
+    "Path": "Resources/Default/default.png",
+    "UUID": "5d765c15ca9671de0000053804ff8000"
+  },
+  {
+    "Path": "Resources/model/Character/HangClimbUpToCrouch.fbx|0",
+    "UUID": "ce2e5c15ca9671de00000771c101d000"
+  },
+  {
+    "Path": "Resources/model/Character/IdleRightTurn90.fbx|0",
+    "UUID": "5c355c15ca9671de000003891305d000"
+  },
+  {
+    "Path": "Resources/model/Character/RunSlow.fbx|0",
+    "UUID": "42935c15ca9671de000009ffaaffe000"
+  },
+  {
+    "Path": "Resources/model/Character/IdleLeftTurn180.fbx|0",
+    "UUID": "41f85c15ca9671de000005f7b587d000"
+  },
+  {
+    "Path": "Resources/Default/green.png",
+    "UUID": "8c1c5c15ca9671de00000a349784f000"
+  },
+  {
+    "Path": "Resources/model/Character/IdleTurnRightNoRotationCarefully.fbx|0",
+    "UUID": "f4db5c15ca9671de00000559cb8c1000"
+  },
+  {
+    "Path": "Resources/model/Character/FallHardLanding.fbx|0",
+    "UUID": "e1f75c15ca9671de00000b6fe9695000"
+  },
+  {
+    "Path": "Resources/model/Character/RunFast.fbx|0",
+    "UUID": "bdda5c15ca9671de000000fa928de000"
+  },
+  {
+    "Path": "Resources/model/Character/HangIdle.fbx|0",
+    "UUID": "ebda5c15ca9671de000009ac73881000"
+  },
+  {
+    "Path": "Resources/Default/capsule.obj",
+    "UUID": "ed2a5c15ca9671de000006fa16270000"
+  },
+  {
+    "Path": "Resources/Editor/BlueprintBackground.png",
+    "UUID": "c8b85c15ca9671de000005568a049000"
+  },
+  {
+    "Path": "Resources/model/Character/HangMoveRight.fbx|0",
+    "UUID": "bcfe5c15ca9671de000000e717113000"
+  },
+  {
+    "Path": "Resources/model/Character/IdleCarefully.fbx|0",
+    "UUID": "a3ec5c15ca9671de000006f53b90c000"
+  },
+  {
+    "Path": "Resources/Default/white.png",
+    "UUID": "29c25c15ca9671de00000e6c14edf000"
+  },
+  {
+    "Path": "Resources/model/Character/HangFromFalling.fbx|0",
+    "UUID": "8daa5c15ca9671de0000092929c6b000"
+  },
+  {
+    "Path": "Resources/model/Character/RunJumpInPlace.fbx|0",
+    "UUID": "f69a5c15ca9671de0000080cacb2c000"
+  }
+]

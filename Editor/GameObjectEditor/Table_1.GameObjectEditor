@@ -1,0 +1,1763 @@
+{
+  "Meta": {
+    "RootUUIDs": [
+      "0df15c15ca9671de000007cf92f61000",
+      "3c115c15ca9671de00000860e3403000"
+    ],
+    "UsedClassNames": [
+      "Scene",
+      "GameObject",
+      "CameraTPP",
+      "FPPCameraScript",
+      "MeshBasicRenderer",
+      "class soft::Model3D",
+      "class soft::Texture2D",
+      "RigidBodyStatic",
+      "PhysicsShapePlane",
+      "PhysicsMaterial",
+      "RigidBodyDynamic",
+      "PhysicsShapeBox",
+      "class soft::Model3D",
+      "class soft::Texture2D",
+      "class soft::Texture2D",
+      "GameObjectEditorSaveData"
+    ]
+  },
+  "Objects": [
+    {
+      "ClassName": "Scene",
+      "Data": {
+        "LongLifeObjects": [],
+        "ShortLifeObjects": [
+          "2a155c15ca9671de00000995e74f9000",
+          "2a755c15ca9671de00000053f8772000",
+          "3dfa5c15ca9671de000001202c399000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "0df15c15ca9671de000007cf92f61000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.03209483623504639,
+            1.4901161193847656e-08,
+            0.9994848370552063,
+            0.0
+          ],
+          [
+            -0.3125488758087158,
+            0.9498486518859863,
+            0.010036379098892212,
+            0.0
+          ],
+          [
+            -0.9493593573570251,
+            -0.3127099573612213,
+            0.03048527240753174,
+            0.0
+          ],
+          [
+            7.233036518096924,
+            3.4017179012298584,
+            -0.1630360186100006,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            7.233036518096924,
+            3.4017179012298584,
+            -0.1630360186100006
+          ],
+          "rotation": [
+            0.11375514417886734,
+            -0.6868894696235657,
+            0.1101609468460083,
+            0.7093005180358887
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MainComponents": [
+          "320b5c15ca9671de000008434fe67000",
+          null,
+          "1f955c15ca9671de0000024bd54e0000",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "#camera"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "2a155c15ca9671de00000995e74f9000"
+    },
+    {
+      "ClassName": "CameraTPP",
+      "Data": {
+        "Aspect": 1.8518520593643188,
+        "EnableTPP": false,
+        "Far": 1000.072509765625,
+        "FovY": 1.0471975803375244,
+        "IsPerspective": true,
+        "Near": 0.5,
+        "Target": "00000000000000000000000000000000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "320b5c15ca9671de000008434fe67000"
+    },
+    {
+      "ClassName": "FPPCameraScript",
+      "Data": {
+        "EnableFPP": true,
+        "Position": [
+          7.233036518096924,
+          3.4017179012298584,
+          -0.1630360186100006
+        ],
+        "RotateSensi": 0.25,
+        "RotateX": -0.3180447816848755,
+        "RotateY": 0.0,
+        "Speed": 10.0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "1f955c15ca9671de0000024bd54e0000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            -1.19209286886246e-09,
+            0.010000000707805157,
+            0.0,
+            0.0
+          ],
+          [
+            -100.00001525878906,
+            -1.1920928955078125e-05,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            100.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.7071068286895752,
+            0.7071068286895752
+          ],
+          "scale": [
+            0.009999999776482582,
+            100.0,
+            100.0
+          ]
+        },
+        "MainComponents": [
+          "2d5a5c15ca9671de000002c701606000",
+          "272a5c15ca9671de00000583fb5e6000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Ground"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "2a755c15ca9671de00000053f8772000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 0,
+        "Model": "32625c15ca9671de00000fe7e9bb2000",
+        "Texture2D": "7fffffffffffffff000005a7e2603000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "2d5a5c15ca9671de000002c701606000"
+    },
+    {
+      "ClassName": "class soft::Model3D",
+      "Data": null,
+      "MemType": 3,
+      "UUID": "32625c15ca9671de00000fe7e9bb2000"
+    },
+    {
+      "ClassName": "class soft::Texture2D",
+      "Data": null,
+      "MemType": 3,
+      "UUID": "7fffffffffffffff000005a7e2603000"
+    },
+    {
+      "ClassName": "RigidBodyStatic",
+      "Data": {
+        "Joints": [],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "2c3d5c15ca9671de000008d4f6a28000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "272a5c15ca9671de00000583fb5e6000"
+    },
+    {
+      "ClassName": "PhysicsShapePlane",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "FilterFlags": 0,
+        "Meterial": "2eee5c15ca9671de000007ce78cbd000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "2c3d5c15ca9671de000008d4f6a28000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.8999999761581421,
+        "Restitution": 0.6000000238418579,
+        "StaticFriction": 0.8999999761581421
+      },
+      "MemType": 1,
+      "UUID": "2eee5c15ca9671de000007ce78cbd000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [
+          "41c95c15ca9671de00000f254f4cf000",
+          "12905c15ca9671de00000c6074cc2000",
+          "23035c15ca9671de00000b1fce5bc000",
+          "c9045c15ca9671de00000b6062132000",
+          "e24d5c15ca9671de00000b2fb1d15000",
+          "80cc5c15ca9671de000004e2e9213000",
+          "a7225c15ca9671de000007204ae3d000",
+          "bb155c15ca9671de000001052b4a7000"
+        ],
+        "GlobalTransformMat": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.4399999976158142,
+            0.0,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.4399999976158142,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MainComponents": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Table_0"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "3dfa5c15ca9671de000001202c399000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [
+          "7f205c15ca9671de0000089d6030b000",
+          "dbfb5c15ca9671de00000f38a2f82000"
+        ],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.0,
+            1.4701757431030273,
+            0.0,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            1.030175805091858,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          null,
+          "455c5c15ca9671de000001a3c2893000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Platte"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "41c95c15ca9671de00000f254f4cf000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 1.0,
+        "MassSpaceInertiaTensor": [
+          0.1666666716337204,
+          0.1666666716337204,
+          0.1666666716337204
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "48bf5c15ca9671de000002a88ef0c000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "455c5c15ca9671de000001a3c2893000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          1.399999976158142,
+          0.05999999865889549,
+          2.200000047683716
+        ],
+        "FilterFlags": 0,
+        "Meterial": "4b505c15ca9671de00000b987103a000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "48bf5c15ca9671de000002a88ef0c000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "4b505c15ca9671de00000b987103a000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.0,
+            1.4701757431030273,
+            0.0,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MainComponents": [
+          "82c65c15ca9671de000009f10347e000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": ""
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "7f205c15ca9671de0000089d6030b000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 3,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff000005f467abc000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "82c65c15ca9671de000009f10347e000"
+    },
+    {
+      "ClassName": "class soft::Model3D",
+      "Data": null,
+      "MemType": 3,
+      "UUID": "79ce5c15ca9671de00000989aba49000"
+    },
+    {
+      "ClassName": "class soft::Texture2D",
+      "Data": null,
+      "MemType": 3,
+      "UUID": "7fffffffffffffff000005f467abc000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.0,
+            1.4701757431030273,
+            0.0,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MainComponents": [
+          "de605c15ca9671de000007dac851e000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": ""
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "dbfb5c15ca9671de00000f38a2f82000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 4,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff00000de3b1aad000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "de605c15ca9671de000007dac851e000"
+    },
+    {
+      "ClassName": "class soft::Texture2D",
+      "Data": null,
+      "MemType": 3,
+      "UUID": "7fffffffffffffff00000de3b1aad000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            -0.550000011920929,
+            0.9699999690055847,
+            -0.8999999761581421,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            -0.550000011920929,
+            0.5299999713897705,
+            -0.8999999761581421
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          "167d5c15ca9671de00000f27dd5be000",
+          "55055c15ca9671de00000e9635c07000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Bein"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "12905c15ca9671de00000c6074cc2000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 5,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff00000de3b1aad000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "167d5c15ca9671de00000f27dd5be000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 1.0,
+        "MassSpaceInertiaTensor": [
+          0.1666666716337204,
+          0.1666666716337204,
+          0.1666666716337204
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "578d5c15ca9671de000007d547695000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "55055c15ca9671de00000e9635c07000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          0.10000000149011612,
+          1.0,
+          0.10000000149011612
+        ],
+        "FilterFlags": 0,
+        "Meterial": "5a1a5c15ca9671de00000d2282152000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "578d5c15ca9671de000007d547695000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "5a1a5c15ca9671de00000d2282152000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.550000011920929,
+            0.9699999690055847,
+            -0.8999999761581421,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.550000011920929,
+            0.5299999713897705,
+            -0.8999999761581421
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          "25385c15ca9671de0000020e1bfc1000",
+          "6d605c15ca9671de000007477196b000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Bein_2"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "23035c15ca9671de00000b1fce5bc000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 6,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff00000de3b1aad000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "25385c15ca9671de0000020e1bfc1000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 1.0,
+        "MassSpaceInertiaTensor": [
+          0.1666666716337204,
+          0.1666666716337204,
+          0.1666666716337204
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "6fe05c15ca9671de000008491dfb0000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "6d605c15ca9671de000007477196b000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          0.10000000149011612,
+          1.0,
+          0.10000000149011612
+        ],
+        "FilterFlags": 0,
+        "Meterial": "725c5c15ca9671de00000218a9144000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "6fe05c15ca9671de000008491dfb0000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "725c5c15ca9671de00000218a9144000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            -0.550000011920929,
+            0.9699999690055847,
+            0.8999999761581421,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            -0.550000011920929,
+            0.5299999713897705,
+            0.8999999761581421
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          "cb525c15ca9671de00000c7c75568000",
+          "d3675c15ca9671de0000038be6ed4000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Bein_3"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "c9045c15ca9671de00000b6062132000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 7,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff00000de3b1aad000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "cb525c15ca9671de00000c7c75568000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 1.0,
+        "MassSpaceInertiaTensor": [
+          0.1666666716337204,
+          0.1666666716337204,
+          0.1666666716337204
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "d5665c15ca9671de000008c4b2020000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "d3675c15ca9671de0000038be6ed4000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          0.10000000149011612,
+          1.0,
+          0.10000000149011612
+        ],
+        "FilterFlags": 0,
+        "Meterial": "d7935c15ca9671de000006300fc94000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "d5665c15ca9671de000008c4b2020000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "d7935c15ca9671de000006300fc94000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.550000011920929,
+            0.9699999690055847,
+            0.8999999761581421,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.550000011920929,
+            0.5299999713897705,
+            0.8999999761581421
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          "e4985c15ca9671de0000097e17f71000",
+          "76955c15ca9671de000004793d230000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Bein_4"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "e24d5c15ca9671de00000b2fb1d15000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 8,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff00000de3b1aad000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "e4985c15ca9671de0000097e17f71000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 1.0,
+        "MassSpaceInertiaTensor": [
+          0.1666666716337204,
+          0.1666666716337204,
+          0.1666666716337204
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "789c5c15ca9671de000006f913e6e000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "76955c15ca9671de000004793d230000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          0.10000000149011612,
+          1.0,
+          0.10000000149011612
+        ],
+        "FilterFlags": 0,
+        "Meterial": "7a3c5c15ca9671de00000372ea612000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "789c5c15ca9671de000006f913e6e000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "7a3c5c15ca9671de00000372ea612000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.0,
+            1.2699999809265137,
+            0.899088442325592,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.8299999237060547,
+            0.899088442325592
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          "83005c15ca9671de00000d3a26ebe000",
+          "9e265c15ca9671de000003472174c000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Bar"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "80cc5c15ca9671de000004e2e9213000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 0,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff000005f467abc000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "83005c15ca9671de00000d3a26ebe000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 1.0,
+        "MassSpaceInertiaTensor": [
+          0.1666666716337204,
+          0.1666666716337204,
+          0.1666666716337204
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "a0215c15ca9671de00000cdc11d28000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "9e265c15ca9671de000003472174c000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          1.0,
+          0.10000000149011612,
+          0.10000000149011612
+        ],
+        "FilterFlags": 0,
+        "Meterial": "a1b15c15ca9671de00000860eaa49000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "a0215c15ca9671de00000cdc11d28000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "a1b15c15ca9671de00000860eaa49000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.0,
+            1.2699999809265137,
+            -0.894140362739563,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.8299999237060547,
+            -0.894140362739563
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          "a93c5c15ca9671de00000470b3a59000",
+          "b2595c15ca9671de00000c4d7f222000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Bar_2"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "a7225c15ca9671de000007204ae3d000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 1,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff000005f467abc000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "a93c5c15ca9671de00000470b3a59000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 1.0,
+        "MassSpaceInertiaTensor": [
+          0.1666666716337204,
+          0.1666666716337204,
+          0.1666666716337204
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "b44a5c15ca9671de00000b4290986000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "b2595c15ca9671de00000c4d7f222000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          1.0,
+          0.10000000149011612,
+          0.10000000149011612
+        ],
+        "FilterFlags": 0,
+        "Meterial": "b5d55c15ca9671de00000791022d0000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "b44a5c15ca9671de00000b4290986000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "b5d55c15ca9671de00000791022d0000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.009999999776482582,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.009999999776482582,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.009999999776482582,
+            0.0
+          ],
+          [
+            0.0,
+            1.2699999809265137,
+            0.0,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.8299999237060547,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ]
+        },
+        "MainComponents": [
+          "bd335c15ca9671de0000072cc3ea9000",
+          "35545c15ca9671de00000b3ffb6a2000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Bar_3"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "bb155c15ca9671de000001052b4a7000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 2,
+        "Model": "79ce5c15ca9671de00000989aba49000",
+        "Texture2D": "7fffffffffffffff000005f467abc000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "bd335c15ca9671de0000072cc3ea9000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 2,
+        "Joints": [],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 1.0,
+        "MassSpaceInertiaTensor": [
+          0.1666666716337204,
+          0.1666666716337204,
+          0.1666666716337204
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "38275c15ca9671de00000e21e440a000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "35545c15ca9671de00000b3ffb6a2000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "CollisionMask": 4294967295,
+        "Dimensions": [
+          0.10000000149011612,
+          0.10000000149011612,
+          1.7999999523162842
+        ],
+        "FilterFlags": 0,
+        "Meterial": "3a8d5c15ca9671de00000ad158aee000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "38275c15ca9671de00000e21e440a000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "3a8d5c15ca9671de00000ad158aee000"
+    },
+    {
+      "ClassName": "GameObjectEditorSaveData",
+      "Data": {
+        "DrawDebug": true,
+        "InspectingObject": "3dfa5c15ca9671de000001202c399000",
+        "LoadedFromFileObject": [],
+        "Objects": [
+          "2a155c15ca9671de00000995e74f9000",
+          "2a755c15ca9671de00000053f8772000",
+          "3dfa5c15ca9671de000001202c399000"
+        ],
+        "RootObject": "3dfa5c15ca9671de000001202c399000"
+      },
+      "MemHeapId": 204,
+      "MemType": 0,
+      "UUID": "3c115c15ca9671de00000860e3403000"
+    }
+  ],
+  "UsedResources": [
+    {
+      "Path": "Resources/Default/cube1.obj",
+      "UUID": "32625c15ca9671de00000fe7e9bb2000"
+    },
+    {
+      "Path": "Resources/model/static/furnitures/Table/Tabel/table.fbx",
+      "UUID": "79ce5c15ca9671de00000989aba49000"
+    },
+    {
+      "Path": "Resources/Default/white.png",
+      "UUID": "7fffffffffffffff000005a7e2603000"
+    },
+    {
+      "Path": "Resources/model/static/furnitures/Table/Tabel/tex/WoodSeemles1.jpg",
+      "UUID": "7fffffffffffffff000005f467abc000"
+    },
+    {
+      "Path": "Resources/model/static/furnitures/Table/Tabel/tex/WoodSeemles.jpg",
+      "UUID": "7fffffffffffffff00000de3b1aad000"
+    }
+  ]
+}

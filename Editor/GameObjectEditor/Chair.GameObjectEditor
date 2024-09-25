@@ -1,0 +1,1651 @@
+{
+  "Meta": {
+    "RootUUIDs": [
+      "7dce5c15ca9671de00000f15f56cc000",
+      "243e5c15ca9671de000009310d276000"
+    ],
+    "UsedClassNames": [
+      "Scene",
+      "GameObject",
+      "CameraTPP",
+      "FPPCameraScript",
+      "MeshBasicRenderer",
+      "class soft::Model3D",
+      "class soft::Texture2D",
+      "RigidBodyStatic",
+      "PhysicsShapePlane",
+      "PhysicsMaterial",
+      "RigidBodyDynamic",
+      "PhysicsShapeBox",
+      "class soft::Model3D",
+      "class soft::Texture2D",
+      "GameObjectEditorSaveData"
+    ]
+  },
+  "Objects": [
+    {
+      "ClassName": "Scene",
+      "Data": {
+        "LongLifeObjects": [],
+        "ShortLifeObjects": [
+          "5e305c15ca9671de000005a3893a2000",
+          "8bff5c15ca9671de000007da4810a000",
+          "a12a5c15ca9671de00000ead87211000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "7dce5c15ca9671de00000f15f56cc000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.136172354221344,
+            0.0,
+            0.990685224533081,
+            0.0
+          ],
+          [
+            -0.11864347755908966,
+            0.9928029775619507,
+            0.016307871788740158,
+            0.0
+          ],
+          [
+            -0.9835551977157593,
+            -0.11975900828838348,
+            0.13519233465194702,
+            0.0
+          ],
+          [
+            6.390521049499512,
+            2.6359221935272217,
+            0.20557579398155212,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            6.390521049499512,
+            2.6359221935272217,
+            0.20557579398155212
+          ],
+          "rotation": [
+            0.045213501900434494,
+            -0.6560179591178894,
+            0.03942389786243439,
+            0.7523576021194458
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MainComponents": [
+          "629e5c15ca9671de0000009986ee7000",
+          null,
+          "7ffa5c15ca9671de00000719120ba000",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "#camera"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "5e305c15ca9671de000005a3893a2000"
+    },
+    {
+      "ClassName": "CameraTPP",
+      "Data": {
+        "Aspect": 1.8518520593643188,
+        "EnableTPP": false,
+        "Far": 1000.072509765625,
+        "FovY": 1.0471975803375244,
+        "IsPerspective": true,
+        "Near": 0.5,
+        "Target": "00000000000000000000000000000000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "629e5c15ca9671de0000009986ee7000"
+    },
+    {
+      "ClassName": "FPPCameraScript",
+      "Data": {
+        "EnableFPP": true,
+        "Position": [
+          6.390521049499512,
+          2.6359221935272217,
+          0.20557579398155212
+        ],
+        "RotateSensi": 0.25,
+        "RotateX": -0.12004713714122772,
+        "RotateY": 0.0,
+        "Speed": 10.0
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "7ffa5c15ca9671de00000719120ba000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            -1.19209286886246e-09,
+            0.010000000707805157,
+            0.0,
+            0.0
+          ],
+          [
+            -100.00001525878906,
+            -1.1920928955078125e-05,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            100.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.7071068286895752,
+            0.7071068286895752
+          ],
+          "scale": [
+            0.009999999776482582,
+            100.0,
+            100.0
+          ]
+        },
+        "MainComponents": [
+          "8e6e5c15ca9671de00000d7195c42000",
+          "932f5c15ca9671de0000096976d18000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Ground"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "8bff5c15ca9671de000007da4810a000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 0,
+        "Model": "32625c15ca9671de00000fe7e9bb2000",
+        "Texture2D": "7fffffffffffffff000005a7e2603000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "8e6e5c15ca9671de00000d7195c42000"
+    },
+    {
+      "ClassName": "class soft::Model3D",
+      "Data": null,
+      "MemType": 3,
+      "UUID": "32625c15ca9671de00000fe7e9bb2000"
+    },
+    {
+      "ClassName": "class soft::Texture2D",
+      "Data": null,
+      "MemType": 3,
+      "UUID": "7fffffffffffffff000005a7e2603000"
+    },
+    {
+      "ClassName": "RigidBodyStatic",
+      "Data": {
+        "Joints": [],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "969d5c15ca9671de000004c03068d000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "932f5c15ca9671de0000096976d18000"
+    },
+    {
+      "ClassName": "PhysicsShapePlane",
+      "Data": {
+        "Meterial": "98725c15ca9671de000007cfc5d2d000",
+        "Transform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "969d5c15ca9671de000004c03068d000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.8999999761581421,
+        "Restitution": 0.6000000238418579,
+        "StaticFriction": 0.8999999761581421
+      },
+      "MemType": 1,
+      "UUID": "98725c15ca9671de000007cfc5d2d000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [
+          "02215c15ca9671de0000062145ef6000"
+        ],
+        "GlobalTransformMat": [
+          [
+            0.004999986849725246,
+            -4.775704837811645e-06,
+            1.0378168553870637e-05,
+            0.0
+          ],
+          [
+            4.775746674567927e-06,
+            0.0049999975599348545,
+            -1.5288215138298256e-08,
+            0.0
+          ],
+          [
+            -1.03781494544819e-05,
+            2.5200874276265495e-08,
+            0.004999989178031683,
+            0.0
+          ],
+          [
+            0.002686647931113839,
+            1.5158475637435913,
+            -0.00015691391308791935,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            3.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            0.004999999888241291,
+            0.004999999888241291,
+            0.004999999888241291
+          ]
+        },
+        "MainComponents": [
+          null,
+          "a34f5c15ca9671de00000ad5cf7be000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Chair"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "a12a5c15ca9671de00000ead87211000"
+    },
+    {
+      "ClassName": "RigidBodyDynamic",
+      "Data": {
+        "AngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "IsKinematic": 1,
+        "Joints": [],
+        "LinearVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Mass": 0.3769780993461609,
+        "MassSpaceInertiaTensor": [
+          0.2916305959224701,
+          0.15436753630638123,
+          0.26267653703689575
+        ],
+        "PhysicsFlags": 0,
+        "Shapes": [
+          "a5575c15ca9671de000000f03224d000",
+          "a9975c15ca9671de00000e6327b40000",
+          "ad9b5c15ca9671de0000019184ad5000",
+          "b17e5c15ca9671de0000019588872000",
+          "b5575c15ca9671de0000051a41f38000",
+          "b91e5c15ca9671de00000858449ea000",
+          "bcda5c15ca9671de00000b3f6b743000",
+          "c0ab5c15ca9671de000002c4af1a6000",
+          "c46d5c15ca9671de000005e82f433000",
+          "c8505c15ca9671de000000d8b66d1000",
+          "cc145c15ca9671de000004cdb53de000",
+          "cfc35c15ca9671de00000c61e6efe000",
+          "d3835c15ca9671de000005b700594000",
+          "d7305c15ca9671de000005ab25ce2000",
+          "daf25c15ca9671de00000d0123055000",
+          "dea35c15ca9671de00000e9e99284000",
+          "e25e5c15ca9671de0000017427c0b000",
+          "e6045c15ca9671de00000c51523e2000",
+          "e99f5c15ca9671de00000e16780f3000",
+          "ed575c15ca9671de0000030bf38cf000",
+          "f1365c15ca9671de00000845ca241000",
+          "f4e25c15ca9671de0000032a4806c000",
+          "f8865c15ca9671de0000052b33272000",
+          "fc295c15ca9671de00000729ab443000"
+        ]
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "a34f5c15ca9671de00000ad5cf7be000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.6899999976158142,
+          0.07000000029802322,
+          1.5
+        ],
+        "Meterial": "a6c55c15ca9671de000002d7922da000",
+        "Transform": {
+          "position": [
+            0.5899999737739563,
+            -0.17000000178813934,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "a5575c15ca9671de000000f03224d000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "a6c55c15ca9671de000002d7922da000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.6000000238418579,
+          0.07000000029802322,
+          1.409999966621399
+        ],
+        "Meterial": "aad95c15ca9671de00000e5b11faa000",
+        "Transform": {
+          "position": [
+            -0.019999999552965164,
+            -0.17000000178813934,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "a9975c15ca9671de00000e6327b40000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "aad95c15ca9671de00000e5b11faa000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.14000000059604645,
+          0.8100000023841858,
+          0.07999999821186066
+        ],
+        "Meterial": "aee05c15ca9671de00000061f705f000",
+        "Transform": {
+          "position": [
+            -0.3799999952316284,
+            -0.5,
+            -0.6000000238418579
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "ad9b5c15ca9671de0000019184ad5000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "aee05c15ca9671de00000061f705f000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.14000000059604645,
+          0.8100000023841858,
+          0.07999999821186066
+        ],
+        "Meterial": "b2c65c15ca9671de0000051830dac000",
+        "Transform": {
+          "position": [
+            -0.3799999952316284,
+            -0.5,
+            0.6000000238418579
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "b17e5c15ca9671de0000019588872000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "b2c65c15ca9671de0000051830dac000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.12999999523162842,
+          0.7200000286102295,
+          0.07999999821186066
+        ],
+        "Meterial": "b6a65c15ca9671de000007fd80ef8000",
+        "Transform": {
+          "position": [
+            0.8299999833106995,
+            -0.550000011920929,
+            -0.6800000071525574
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "b5575c15ca9671de0000051a41f38000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "b6a65c15ca9671de000007fd80ef8000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.12999999523162842,
+          0.7200000286102295,
+          0.07999999821186066
+        ],
+        "Meterial": "ba645c15ca9671de00000ce04bd1f000",
+        "Transform": {
+          "position": [
+            0.8299999833106995,
+            -0.550000011920929,
+            0.6700000166893005
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "b91e5c15ca9671de00000858449ea000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "ba645c15ca9671de00000ce04bd1f000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.10000000149011612,
+          0.14000000059604645,
+          1.1799999475479126
+        ],
+        "Meterial": "be235c15ca9671de000001dcd1d01000",
+        "Transform": {
+          "position": [
+            -0.4000000059604645,
+            -0.8299999833106995,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "bcda5c15ca9671de00000b3f6b743000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "be235c15ca9671de000001dcd1d01000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.10000000149011612,
+          0.14000000059604645,
+          1.350000023841858
+        ],
+        "Meterial": "c1f25c15ca9671de000001e7000a1000",
+        "Transform": {
+          "position": [
+            0.8399999737739563,
+            -0.8299999833106995,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "c0ab5c15ca9671de000002c4af1a6000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "c1f25c15ca9671de000001e7000a1000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          1.350000023841858,
+          0.14000000059604645,
+          0.05999999865889549
+        ],
+        "Meterial": "c5b15c15ca9671de00000179026f3000",
+        "Transform": {
+          "position": [
+            0.23000000417232513,
+            -0.8299999833106995,
+            0.6299999952316284
+          ],
+          "rotation": [
+            0.0,
+            -0.033493734896183014,
+            0.0,
+            0.9994389414787292
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "c46d5c15ca9671de000005e82f433000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "c5b15c15ca9671de00000179026f3000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          1.350000023841858,
+          0.14000000059604645,
+          0.05999999865889549
+        ],
+        "Meterial": "c99b5c15ca9671de00000a146b13f000",
+        "Transform": {
+          "position": [
+            0.23000000417232513,
+            -0.8299999833106995,
+            -0.6299999952316284
+          ],
+          "rotation": [
+            0.0,
+            0.03249427676200867,
+            0.0,
+            0.99947190284729
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "c8505c15ca9671de000000d8b66d1000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "c99b5c15ca9671de00000a146b13f000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.12999999523162842,
+          0.6399999856948853,
+          0.07999999821186066
+        ],
+        "Meterial": "cd575c15ca9671de000007ace94b7000",
+        "Transform": {
+          "position": [
+            0.8700000047683716,
+            -1.190000057220459,
+            -0.675000011920929
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.05247588828206062,
+            0.9986221790313721
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "cc145c15ca9671de000004cdb53de000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "cd575c15ca9671de000007ace94b7000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.12999999523162842,
+          0.6399999856948853,
+          0.07999999821186066
+        ],
+        "Meterial": "d1185c15ca9671de0000086d7c836000",
+        "Transform": {
+          "position": [
+            0.8799999952316284,
+            -1.190000057220459,
+            0.6664999723434448
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.05247588828206062,
+            0.9986221790313721
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "cfc35c15ca9671de00000c61e6efe000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "d1185c15ca9671de0000086d7c836000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.12999999523162842,
+          0.6399999856948853,
+          0.07999999821186066
+        ],
+        "Meterial": "d4c55c15ca9671de00000fd7726eb000",
+        "Transform": {
+          "position": [
+            -0.4699999988079071,
+            -1.190000057220459,
+            0.6000000238418579
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.11871934682130814,
+            0.9929278492927551
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "d3835c15ca9671de000005b700594000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "d4c55c15ca9671de00000fd7726eb000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.12999999523162842,
+          0.6399999856948853,
+          0.07999999821186066
+        ],
+        "Meterial": "d8785c15ca9671de000003078334e000",
+        "Transform": {
+          "position": [
+            -0.4699999988079071,
+            -1.190000057220459,
+            -0.6000000238418579
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.11871934682130814,
+            0.9929278492927551
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "d7305c15ca9671de000005ab25ce2000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "d8785c15ca9671de000003078334e000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.14000000059604645,
+          0.8100000023841858,
+          0.07999999821186066
+        ],
+        "Meterial": "dc375c15ca9671de000005c49c1e9000",
+        "Transform": {
+          "position": [
+            -0.3499999940395355,
+            0.30000001192092896,
+            -0.6000000238418579
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.03049527108669281,
+            0.9995349049568176
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "daf25c15ca9671de00000d0123055000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "dc375c15ca9671de000005c49c1e9000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.14000000059604645,
+          0.8100000023841858,
+          0.07999999821186066
+        ],
+        "Meterial": "dfe55c15ca9671de00000c194565f000",
+        "Transform": {
+          "position": [
+            -0.3499999940395355,
+            0.30000001192092896,
+            0.6000000238418579
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.03049526922404766,
+            0.9995349049568176
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "dea35c15ca9671de00000e9e99284000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "dfe55c15ca9671de00000c194565f000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.14000000059604645,
+          0.7799999713897705,
+          0.07999999821186066
+        ],
+        "Meterial": "e3a55c15ca9671de000001461b89e000",
+        "Transform": {
+          "position": [
+            -0.3499999940395355,
+            1.059999942779541,
+            0.6000000238418579
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.037491220980882645,
+            0.9992969632148743
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "e25e5c15ca9671de0000017427c0b000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "e3a55c15ca9671de000001461b89e000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.14000000059604645,
+          0.7799999713897705,
+          0.07999999821186066
+        ],
+        "Meterial": "e7425c15ca9671de0000073f1b166000",
+        "Transform": {
+          "position": [
+            -0.3499999940395355,
+            1.059999942779541,
+            -0.6000000238418579
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.03749122470617294,
+            0.9992969632148743
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "e6045c15ca9671de00000c51523e2000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "e7425c15ca9671de0000073f1b166000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.05999999865889549,
+          0.20000000298023224,
+          1.2699999809265137
+        ],
+        "Meterial": "eae35c15ca9671de00000ff6473ff000",
+        "Transform": {
+          "position": [
+            -0.3199999928474426,
+            0.17000000178813934,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "e99f5c15ca9671de00000e16780f3000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "eae35c15ca9671de00000ff6473ff000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.05999999865889549,
+          0.2199999988079071,
+          1.2699999809265137
+        ],
+        "Meterial": "eeaa5c15ca9671de00000e2c79ee3000",
+        "Transform": {
+          "position": [
+            -0.3199999928474426,
+            0.5899999737739563,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "ed575c15ca9671de0000030bf38cf000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "eeaa5c15ca9671de00000e2c79ee3000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.05999999865889549,
+          0.44999998807907104,
+          1.2699999809265137
+        ],
+        "Meterial": "f2775c15ca9671de0000049b72c9b000",
+        "Transform": {
+          "position": [
+            -0.36000001430511475,
+            1.1299999952316284,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "f1365c15ca9671de00000845ca241000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "f2775c15ca9671de0000049b72c9b000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          0.05999999865889549,
+          0.10999999940395355,
+          0.6899999976158142
+        ],
+        "Meterial": "f6245c15ca9671de0000042e4ee45000",
+        "Transform": {
+          "position": [
+            -0.3799999952316284,
+            1.399999976158142,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "f4e25c15ca9671de0000032a4806c000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "f6245c15ca9671de0000042e4ee45000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          1.25,
+          0.14000000059604645,
+          0.05999999865889549
+        ],
+        "Meterial": "f9ca5c15ca9671de00000d64bbcba000",
+        "Transform": {
+          "position": [
+            0.20999999344348907,
+            -0.2800000011920929,
+            -0.6299999952316284
+          ],
+          "rotation": [
+            0.0,
+            0.03249427676200867,
+            0.0,
+            0.99947190284729
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "f8865c15ca9671de0000052b33272000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "f9ca5c15ca9671de00000d64bbcba000"
+    },
+    {
+      "ClassName": "PhysicsShapeBox",
+      "Data": {
+        "Dimensions": [
+          1.25,
+          0.14000000059604645,
+          0.05999999865889549
+        ],
+        "Meterial": "fd655c15ca9671de000007bb5dd7f000",
+        "Transform": {
+          "position": [
+            0.20999999344348907,
+            -0.2800000011920929,
+            0.6299999952316284
+          ],
+          "rotation": [
+            0.0,
+            0.03249427676200867,
+            0.0,
+            0.99947190284729
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MemType": 1,
+      "UUID": "fc295c15ca9671de00000729ab443000"
+    },
+    {
+      "ClassName": "PhysicsMaterial",
+      "Data": {
+        "DynamicFriction": 0.5,
+        "Restitution": 0.5,
+        "StaticFriction": 0.5
+      },
+      "MemType": 1,
+      "UUID": "fd655c15ca9671de000007bb5dd7f000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [
+          "044c5c15ca9671de00000e519bd17000"
+        ],
+        "GlobalTransformMat": [
+          [
+            0.004999986849725246,
+            -4.775704837811645e-06,
+            1.0378168553870637e-05,
+            0.0
+          ],
+          [
+            4.775746674567927e-06,
+            0.0049999975599348545,
+            -1.5288215138298256e-08,
+            0.0
+          ],
+          [
+            -1.03781494544819e-05,
+            2.5200874276265495e-08,
+            0.004999989178031683,
+            0.0
+          ],
+          [
+            0.002686647931113839,
+            1.5158475637435913,
+            -0.00015691391308791935,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "MainComponents": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Model"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "02215c15ca9671de0000062145ef6000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [
+          "0b645c15ca9671de000007b7e27ac000"
+        ],
+        "GlobalTransformMat": [
+          [
+            0.012699966318905354,
+            -1.2130290087952744e-05,
+            2.636054705362767e-05,
+            0.0
+          ],
+          [
+            -2.434981070109643e-05,
+            5.772925248948013e-08,
+            0.01173126045614481,
+            0.0
+          ],
+          [
+            -1.2130392860854045e-05,
+            -0.012699992395937443,
+            3.7318109491479845e-08,
+            0.0
+          ],
+          [
+            0.002686647931113839,
+            1.5158475637435913,
+            -0.00015691391308791935,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "rotation": [
+            0.7071068286895752,
+            0.0,
+            0.0,
+            0.7071067094802856
+          ],
+          "scale": [
+            2.5399999618530273,
+            2.346257448196411,
+            2.5399999618530273
+          ]
+        },
+        "MainComponents": [
+          "07575c15ca9671de0000050ec1a1f000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Box009"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "044c5c15ca9671de00000e519bd17000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 0,
+        "Model": "7fffffffffffffff000002f17e6c5000",
+        "Texture2D": "10505c15ca9671de000009da2202b000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "07575c15ca9671de0000050ec1a1f000"
+    },
+    {
+      "ClassName": "class soft::Model3D",
+      "Data": null,
+      "MemType": 3,
+      "UUID": "7fffffffffffffff000002f17e6c5000"
+    },
+    {
+      "ClassName": "class soft::Texture2D",
+      "Data": null,
+      "MemType": 3,
+      "UUID": "10505c15ca9671de000009da2202b000"
+    },
+    {
+      "ClassName": "GameObject",
+      "Data": {
+        "Children": [],
+        "GlobalTransformMat": [
+          [
+            0.013214319944381714,
+            -1.2621571841009427e-05,
+            2.7428159228293225e-05,
+            0.0
+          ],
+          [
+            -2.575417238404043e-05,
+            6.105875627326895e-08,
+            0.012407854199409485,
+            0.0
+          ],
+          [
+            -1.2130392860854045e-05,
+            -0.012699992395937443,
+            3.7318109491479845e-08,
+            0.0
+          ],
+          [
+            0.32519280910491943,
+            1.3439357280731201,
+            0.007655716501176357,
+            1.0
+          ]
+        ],
+        "LocalTransform": {
+          "position": [
+            25.4083251953125,
+            0.608830451965332,
+            13.512104034423828
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0405004024505615,
+            1.0576744079589844,
+            1.0
+          ]
+        },
+        "MainComponents": [
+          "0d705c15ca9671de00000a0c8c202000",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "Name": "Box010"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "0b645c15ca9671de000007b7e27ac000"
+    },
+    {
+      "ClassName": "MeshBasicRenderer",
+      "Data": {
+        "CascadeAlpha": true,
+        "GlobalAlpha": 1.0,
+        "LocalAlpha": 1.0,
+        "MeshId": 1,
+        "Model": "7fffffffffffffff000002f17e6c5000",
+        "Texture2D": "10505c15ca9671de000009da2202b000"
+      },
+      "MemHeapId": 0,
+      "MemType": 0,
+      "UUID": "0d705c15ca9671de00000a0c8c202000"
+    },
+    {
+      "ClassName": "GameObjectEditorSaveData",
+      "Data": {
+        "DrawDebug": true,
+        "InspectingObject": "a12a5c15ca9671de00000ead87211000",
+        "LoadedFromFileObject": [],
+        "Objects": [
+          "5e305c15ca9671de000005a3893a2000",
+          "8bff5c15ca9671de000007da4810a000",
+          "a12a5c15ca9671de00000ead87211000"
+        ],
+        "RootObject": "a12a5c15ca9671de00000ead87211000"
+      },
+      "MemHeapId": 204,
+      "MemType": 0,
+      "UUID": "243e5c15ca9671de000009310d276000"
+    }
+  ],
+  "UsedResources": [
+    {
+      "Path": "Resources/model/static/furnitures/SimpleWoodChair/SimpleWoodChair/woodbase.jpg",
+      "UUID": "10505c15ca9671de000009da2202b000"
+    },
+    {
+      "Path": "Resources/Default/cube1.obj",
+      "UUID": "32625c15ca9671de00000fe7e9bb2000"
+    },
+    {
+      "Path": "Resources/model/static/furnitures/SimpleWoodChair/SimpleWoodChair/simplewoodchair_converted.fbx",
+      "UUID": "7fffffffffffffff000002f17e6c5000"
+    },
+    {
+      "Path": "Resources/Default/white.png",
+      "UUID": "7fffffffffffffff000005a7e2603000"
+    }
+  ]
+}

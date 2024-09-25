@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+	<Type Name="soft::ManagedPointer&lt;*&gt;">
+		<DisplayString Condition="m_ptr == 0">nullptr</DisplayString>
+		<DisplayString Condition="m_ptr != 0">{*m_ptr}</DisplayString>
+
+		<Expand>
+			<Item Condition="m_ptr != 0" Name="[ptr]">m_ptr</Item>
+		</Expand>
+	</Type>
+
+	
+	<Type Name="soft::ManagedLocalPtr&lt;*&gt;">
+		<DisplayString Condition="m_ptr == 0">nullptr</DisplayString>
+		<DisplayString Condition="m_ptr != 0">{*m_ptr}</DisplayString>
+
+		<Expand>
+			<Item Condition="m_ptr != 0" Name="[ptr]">m_ptr</Item>
+		</Expand>
+	</Type>
+	
+	
+	<Type Name="soft::Array&lt;*&gt;">
+		<Intrinsic Name="size" Expression="m_size" />
+		<Intrinsic Name="capacity" Expression="m_capacity" />
+		<DisplayString>{{ size={size()} }}</DisplayString>
+		<Expand>
+			<Item Name="[capacity]" ExcludeView="simple">capacity()</Item>
+			<ArrayItems>
+				<Size>size()</Size>
+				<ValuePointer>m_buffer.m_ptr</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+
+	
+	<Type Name="soft::String">
+		<Intrinsic Name="length" Expression="m_header->m_length" />
+		<Intrinsic Name="isNotEmpty" Expression="m_header->m_length != 0" />
+		<Intrinsic Name="isEmpty" Expression="m_header == 0" />
+		<Intrinsic Name="c_str" Expression="(char*)(m_header + 1)" />
+		
+		<DisplayString Condition="isNotEmpty()">{c_str(),na}</DisplayString>
+		<DisplayString Condition="isEmpty()">empty</DisplayString>
+		<StringView Condition="isNotEmpty()">c_str()</StringView>
+
+		<Expand>
+			<Item Condition="m_header != 0" Name="[header]">m_header</Item>
+		</Expand>
+	</Type>
+	
+</AutoVisualizer>
