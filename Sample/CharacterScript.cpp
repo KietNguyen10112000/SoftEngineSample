@@ -8,7 +8,9 @@
 #include "MainSystem/Physics/Components/CharacterControllerCapsule.h"
 #include "MainSystem/Physics/PhysicsSystem.h"
 #include "MainSystem/Physics/Query/ActionPhysicsSweep.h"
+#include "MainSystem/Physics/Query/ActionPhysicsOverlap.h"
 #include "MainSystem/Physics/Shapes/PhysicsShapeCapsule.h"
+#include "MainSystem/Physics/Shapes/PhysicsShapeBox.h"
 
 #include "Common/Actions/ActionExecution.h"
 #include "Common/Actions/ActionSequence.h"
@@ -26,6 +28,29 @@
 #include "imgui/imgui.h"
 
 #include "AnimationUtils.h"
+#include "TAG.h"
+#include "ClimbingBar.h"
+
+#define CharacterScript_CLIMBING_QUERY_BOX_SIZE 3.5f
+
+PhysicsQueryHitType::ENUM CharacterScript::CharacterCollisionFilter::PrevFilter(GameObject* obj, PhysicsShape* shape, PhysicsHitFlags& flags)
+{
+	auto tag = obj->Tag();
+	switch (tag)
+	{
+	case TAG::CLIMBING_BAR:
+		return PhysicsQueryHitType::IGNORE;
+	default:
+		break;
+	}
+
+	return PhysicsQueryHitType::TOUCH;
+}
+
+PhysicsQueryHitType::ENUM CharacterScript::CharacterCollisionFilter::PostFilter(GameObject* obj, PhysicsShape* shape, const PhysicsQueryHit& hit)
+{
+	return PhysicsQueryHitType::ENUM();
+}
 
 void CharacterScript::OnStart()
 {
@@ -41,6 +66,11 @@ void CharacterScript::OnStart()
 	m_character.Initialize(m_animator);
 
 	m_actionExecution = ActionExecution::New({});
+
+	m_cctCollisionFilter = std::make_shared<CharacterCollisionFilter>(this);
+	m_controller->CCTSetFilterCallback(m_cctCollisionFilter);
+
+	m_climbingQueryShape = std::make_shared<PhysicsShapeBox>(Vec3(CharacterScript_CLIMBING_QUERY_BOX_SIZE), nullptr);
 }
 
 void CharacterScript::OnUpdate(float dt)
@@ -60,6 +90,17 @@ void CharacterScript::OnUpdate(float dt)
 
 void CharacterScript::OnGUI()
 {
+	{
+		auto debugGraphics = Graphics::Get()->GetDebugGraphics();
+		if (debugGraphics)
+		{
+			auto transform = m_controller->GetGameObject()->GetCommittedGlobalTransform();
+			transform.Position() += transform.Forward().Normal() * (CharacterScript_CLIMBING_QUERY_BOX_SIZE / 2.0f);
+			transform = Mat4::Scaling(Vec3(CharacterScript_CLIMBING_QUERY_BOX_SIZE)) * transform;
+			debugGraphics->DrawCube(transform);
+		}
+	}
+
 	return;
 
 	static Transform start = {};
@@ -253,6 +294,17 @@ void CharacterScript::ControlMovement(float dt)
 		}
 
 		ControlCCTRotation(dt, 2.0f * PI);
+	}
+
+	if (m_currentBodyState == STATE::CLIMBING)
+	{
+		if (Input()->IsKeyPressed(KEYBOARD::SPACE))
+		{
+			m_controller->SetGravity(GetScene()->GetPhysicsSystem()->GetGravity());
+			m_currentBodyState = STATE::IDLE;
+			m_nextBodyState = STATE::IDLE;
+			m_controller->Move(m_currentClimbingBar->GetCommittedGlobalTransform().Forward().Normal() * 5.0f);
+		}
 	}
 }
 
@@ -657,7 +709,7 @@ void CharacterScript::PlayAnimTurnFromIdle(float dt)
 					m_character.Transit0->FadeTo(AnimTransitLayer::TransitDirection::FORWARD, 0.15f,
 						m_character.Animations.IdleCarefully, -1, -1);
 
-					TimeoutTransitingBodyState(STATE::IDLE, 0.15f);
+					TimeoutTransitingBodyState(STATE::IDLE, 0.17f);
 				}
 			);
 		}
@@ -871,6 +923,24 @@ void CharacterScript::FallingUpdate(float dt)
 
 	//std::cout << "groundCount: " << m_controller->CCTGetCollisionPlanes().groundCount << "\n";
 
+	{
+		auto transform = m_controller->GetGameObject()->GetCommittedGlobalTransform();
+		transform.Position() += transform.Forward().Normal() * (CharacterScript_CLIMBING_QUERY_BOX_SIZE / 2.0f);
+		m_actionExecution->RunAction(
+			Physics()->Overlap(
+				[&](const ActionPhysicsOverlap* action, const PhysicsOverlapResult& result)
+				{
+					if (!action->HitOrTouchAnything())
+					{
+						return;
+					}
+					FallingToClimbingUpdate(GetScene()->Dt(), action, result);
+				},
+				m_climbingQueryShape.get(), Transform::FromTransformMatrix(transform), m_fallingSweepFilter
+			)
+		);
+	}
+
 	auto startPosition = start.Position();
 	auto pos = start.Position();
 
@@ -905,7 +975,7 @@ void CharacterScript::FallingUpdate(float dt)
 		auto serialId = Physics()->BeginSerialQuery(
 			[&, localState](PhysicsSystem* sys, const ActionPhysicsQuery* prev, const ActionPhysicsQuery*) -> bool
 			{
-				auto sweepPrev = (const ActionPhysicsSweep*)prev;
+				auto sweepPrev = dynamic_cast<const ActionPhysicsSweep*>(prev);
 				if (localState->stopSerialQuery || (sweepPrev && sweepPrev->HitOrTouchAnything()))
 				{
 					localState->stopSerialQuery = true;
@@ -1231,11 +1301,146 @@ void CharacterScript::PlayAnimFalling(float dt)
 	);
 }
 
+void CharacterScript::StopFalling()
+{
+	if (m_fallingUpdateAction)
+	{
+		m_actionExecution->StopAction(m_fallingUpdateAction);
+		m_fallingUpdateAction = nullptr;
+	}
+}
+
+// find the best climbing bar
+GameObject* CharacterScript::GetClimbingBar(const PhysicsOverlapResult& result)
+{
+	GameObject* climbingBar = nullptr;
+	float nearestDist2 = FLT_MAX;
+
+	auto& cctGlobal = m_controller->GetGameObject()->GetCommittedGlobalTransform();
+	auto& cctOrigin = cctGlobal.Position();
+	auto cctForward = cctGlobal.Forward().Normal();
+
+	auto FnChooseBest = [&](GameObject* obj)
+	{
+		auto& global = obj->GetCommittedGlobalTransform();
+		auto& barPos = global.Position();
+
+		Plane pForward = Plane(cctOrigin, cctForward);
+		if (pForward.SideOf(barPos) < 0)
+		{
+			// get the climbing bar that is forward to cct
+			return;
+		}
+
+		auto bar = obj->GetComponentRaw<ClimbingBar>();
+		auto halfDistance = bar->GetHalfDistance();
+
+		Line line = Line(barPos, global.Right());
+		Plane p = Plane(cctOrigin, global.Right());
+
+		Vec3 point;
+		if (line.Intersect(p, point))
+		{
+			bool isPointInsideBar = (barPos - point).Length2() <= halfDistance * halfDistance;
+			if (isPointInsideBar)
+			{
+				auto d2 = (cctOrigin - point).Length2();
+				if (nearestDist2 > d2)
+				{
+					climbingBar = obj;
+					nearestDist2 = d2;
+
+					m_currentClimbingBarAnchorPoint = point;
+				}
+			}
+		}
+	};
+
+	auto FnFindClimbingBar = [&](GameObject* obj)
+	{
+		if (obj->Tag() == TAG::CLIMBING_BAR)
+		{
+			FnChooseBest(obj);
+		}
+
+		for (auto& c : obj->Children())
+		{
+			if (c->Tag() == TAG::CLIMBING_BAR)
+			{
+				FnChooseBest(c);
+			}
+		}
+	};
+
+	if (result.hasBlock)
+	{
+		FnFindClimbingBar(result.block.obj);
+	}
+
+	for (auto& touch : result.touches)
+	{
+		FnFindClimbingBar(touch.obj);
+	}
+
+	return climbingBar;
+}
+
+void CharacterScript::FallingToClimbingUpdate(float dt, const ActionPhysicsOverlap* action, const PhysicsOverlapResult& result)
+{
+	if (m_currentBodyState != STATE::FALL || IsAnimTransiting())
+	{
+		return;
+	}
+
+	//bool isClimbable = false;
+	m_currentClimbingBar = GetClimbingBar(result);
+	if (m_currentClimbingBar)
+	{
+		StopFalling();
+
+		m_currentBodyState = STATE::CLIMBING;
+		m_nextBodyState = STATE::CLIMBING;
+
+		auto& pos = m_currentClimbingBarAnchorPoint;//m_currentClimbingBar->GetCommittedGlobalTransform().Position();
+		auto normal = m_currentClimbingBar->GetCommittedGlobalTransform().Forward().Normal();
+
+		auto cctCapsule = (CharacterControllerCapsule*)m_controller;
+		auto r = cctCapsule->CCTGetRadius();
+		auto h = cctCapsule->CCTGetHeight();
+		auto dG = cctCapsule->GetGravity().Normal();
+
+		const auto legLengthHorizontal = 0.5f;
+		const auto legLengthVertical = 0.2f;
+
+		auto destPos = pos + normal * (r + legLengthHorizontal) + dG * (h / 2.0f + r + legLengthVertical);
+
+		m_controller->SetGravity({ 0,0,0 });
+		m_controller->CCTSetVelocity({ 0,0,0 });
+		m_actionExecution->RunAction(
+			ActionInterpolation<Vec3>::New(
+				{
+					{ m_controller->GetGameObject()->GetCommittedGlobalTransform().Position(), 0 },
+					{ destPos, 0.8f }
+				},
+				[&, pos, destPos](const Vec3& value)
+				{
+					auto& cctPos = m_controller->GetGameObject()->GetCommittedGlobalTransform().Position();
+					auto d = value - cctPos;
+					m_controller->Move(d);
+
+					auto debugGraphics = Graphics::Get()->GetDebugGraphics();
+					debugGraphics->DrawRay(pos, destPos - pos);
+				}
+			)
+		);
+	}
+}
+
+void CharacterScript::ClimbingUpdate(float dt)
+{
+}
+
 void CharacterScript::DeserializeFromJson(Serializer* serializer, const json& j)
 {
 	Base::DeserializeFromJson(serializer, j);
-
-	int x = 3;
-
-	std::cout << "Hahahaha\n";
 }

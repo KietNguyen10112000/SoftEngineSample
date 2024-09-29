@@ -21,6 +21,7 @@ namespace soft
 	class AnimatorSkeletalArray;
 	class ActionExecution;
 	class Action;
+	class ActionPhysicsOverlap;
 }
 
 class CharacterScript : public TPPCameraScript
@@ -46,6 +47,7 @@ protected:
 			JUMP_FROM_IDLE,
 			FALL,
 			LANDING,
+			CLIMBING,
 			TURN,
 			RAGDOLL
 		};
@@ -65,6 +67,17 @@ protected:
 	struct FallingSweepLocalState
 	{
 		bool stopSerialQuery = false;
+	};
+
+	class CharacterCollisionFilter : public PhysicsQueryFilterCallback
+	{
+	public:
+		CharacterScript* m_script;
+		inline CharacterCollisionFilter(CharacterScript* script) : m_script(script) {};
+
+		// Inherited via PhysicsQueryFilterCallback
+		PhysicsQueryHitType::ENUM PrevFilter(GameObject* obj, PhysicsShape* shape, PhysicsHitFlags& flags) override;
+		PhysicsQueryHitType::ENUM PostFilter(GameObject* obj, PhysicsShape* shape, const PhysicsQueryHit& hit) override;
 	};
 
 protected:
@@ -106,6 +119,12 @@ protected:
 
 	SharedPtr<PhysicsShape> m_testQueryShape;
 	SharedPtr<ActionExecution> m_testQueryShapeActionExecution;
+
+	SharedPtr<PhysicsQueryFilterCallback> m_cctCollisionFilter = nullptr;
+
+	SharedPtr<PhysicsShape> m_climbingQueryShape = nullptr;
+	GameObject* m_currentClimbingBar = nullptr;
+	Vec3 m_currentClimbingBarAnchorPoint = {};
 
 public:
 	void OnStart() override;
@@ -165,6 +184,11 @@ private:
 
 	bool IsOnGround(float slopLimit = 0.0f) const;
 	void PlayAnimFalling(float dt);
+
+	void StopFalling();
+	GameObject* GetClimbingBar(const PhysicsOverlapResult& result);
+	void FallingToClimbingUpdate(float dt, const ActionPhysicsOverlap* action, const PhysicsOverlapResult& result);
+	void ClimbingUpdate(float dt);
 
 protected:
 	void DeserializeFromJson(Serializer* serializer, const json& j) override;

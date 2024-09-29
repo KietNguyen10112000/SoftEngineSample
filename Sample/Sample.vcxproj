@@ -142,6 +142,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CharacterScript.cpp" />
+    <ClCompile Include="ClimbingBar.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +153,8 @@
     <ClInclude Include="AnimationUtils.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="CharacterScript.h" />
+    <ClInclude Include="ClimbingBar.h" />
+    <ClInclude Include="TAG.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

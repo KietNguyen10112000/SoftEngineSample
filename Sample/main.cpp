@@ -1,6 +1,7 @@
 #include "Plugins/Bridge/PluginImpl.h"
 
 #include "CharacterScript.h"
+#include "ClimbingBar.h"
 
 void RegisterSerializables()
 {
@@ -12,6 +13,7 @@ void RegisterSerializables()
 	//	SerializableDB::Get()->Register<<custom serializable classes ClassName>>();
 
 	SerializableDB::Get()->Register<CharacterScript>();
+	SerializableDB::Get()->Register<ClimbingBar>();
 }
 
 void Initialize(Runtime* runtime)
