@@ -47,7 +47,9 @@ protected:
 			JUMP_FROM_IDLE,
 			FALL,
 			LANDING,
+			TRANSIT_TO_CLIMBING,
 			CLIMBING,
+			CLIMBING_UP,
 			TURN,
 			RAGDOLL
 		};
@@ -110,6 +112,7 @@ protected:
 	SharedPtr<ActionBase> m_switchBodyStateAction = nullptr;
 	SharedPtr<ActionBase> m_modifyingMovingSpeedAction = nullptr;
 
+	SharedPtr<ActionBase> m_prepareFallingUpdateActions[3] = {};
 	SharedPtr<ActionBase> m_landingTransitAction = nullptr;
 	SharedPtr<ActionBase> m_fallingUpdateAction = nullptr;
 	SharedPtr<FallingSweepFilter> m_fallingSweepFilter = std::make_shared<FallingSweepFilter>(this);
@@ -122,9 +125,15 @@ protected:
 
 	SharedPtr<PhysicsQueryFilterCallback> m_cctCollisionFilter = nullptr;
 
+	SharedPtr<ActionBase> m_jumpingToClimbingUpdateAction = nullptr;
 	SharedPtr<PhysicsShape> m_climbingQueryShape = nullptr;
 	GameObject* m_currentClimbingBar = nullptr;
 	Vec3 m_currentClimbingBarAnchorPoint = {};
+	Vec3 m_climbingToBarPrevPos = {};
+
+	float m_cctOriginalHeight = 0;
+	float m_cctOriginalRadius = 0;
+
 
 public:
 	void OnStart() override;
@@ -134,6 +143,8 @@ public:
 	Handle<ClassMetadata> GetMetadata(size_t sign) override;
 
 private:
+	void ResetDefaultState(float dt);
+
 	void ControlCCTRotation(float dt, float rotationSpeed);
 	void ControlMovement(float dt);
 	// return true if moved
@@ -185,10 +196,14 @@ private:
 	bool IsOnGround(float slopLimit = 0.0f) const;
 	void PlayAnimFalling(float dt);
 
-	void StopFalling();
+	void StopJumpingOrFalling();
 	GameObject* GetClimbingBar(const PhysicsOverlapResult& result);
-	void FallingToClimbingUpdate(float dt, const ActionPhysicsOverlap* action, const PhysicsOverlapResult& result);
+	void JumpngToClimbingUpdate(float dt, const ActionPhysicsOverlap* action, const PhysicsOverlapResult& result);
 	void ClimbingUpdate(float dt);
+	void StartJumpingToClimpingUpdate();
+	void StopJumpingToClimbingUpdate();
+	void PlayAnimClimbUp(float dt);
+	void PlayAnimClimbUpRestoreCCTDimensions(float dt);
 
 protected:
 	void DeserializeFromJson(Serializer* serializer, const json& j) override;

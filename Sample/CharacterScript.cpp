@@ -17,6 +17,7 @@
 #include "Common/Actions/ActionDelay.h"
 #include "Common/Actions/ActionCallback.h"
 #include "Common/Actions/ActionRepeatUntil.h"
+#include "Common/Actions/ActionDelayNTicks.h"
 
 #include "Input/Input.h"
 
@@ -90,7 +91,7 @@ void CharacterScript::OnUpdate(float dt)
 
 void CharacterScript::OnGUI()
 {
-	{
+	/*{
 		auto debugGraphics = Graphics::Get()->GetDebugGraphics();
 		if (debugGraphics)
 		{
@@ -99,7 +100,7 @@ void CharacterScript::OnGUI()
 			transform = Mat4::Scaling(Vec3(CharacterScript_CLIMBING_QUERY_BOX_SIZE)) * transform;
 			debugGraphics->DrawCube(transform);
 		}
-	}
+	}*/
 
 	return;
 
@@ -187,9 +188,43 @@ Handle<ClassMetadata> CharacterScript::GetMetadata(size_t sign)
 {
 	auto meta = mheap::New<ClassMetadata>(GetClassName(), this);
 
-	
+	{
+		auto accessor = Accessor(
+			"Reset Default State",
+			1,
+			[](const Variant& input, UnknownAddress& var, Serializable* instance) -> void
+			{
+				auto script = (CharacterScript*)instance;
+				script->ResetDefaultState(0);
+			},
+
+			[](UnknownAddress& var, Serializable* instance) -> Variant
+			{
+				return Variant::Of(true);
+			},
+			this
+		);
+		meta->AddProperty(accessor);
+	}
 
 	return meta;
+}
+
+void CharacterScript::ResetDefaultState(float dt)
+{
+	m_currentMovingSpeed = 0.0f;
+
+	m_character.Blend01->SetEnabled(false);
+	m_character.SrcPlayer0->SetEnabled(false);
+	m_character.SrcPlayer1->SetEnabled(false);
+
+	m_character.Transit0->GetInput()->SetEnabled(true);
+
+	m_actionExecution->StopAllActions();
+	m_character.Transit0->FadeTo(AnimTransitLayer::TransitDirection::FORWARD, 0.2f, m_character.Animations.IdleCarefully, -1, -1);
+
+	m_currentBodyState = STATE::IDLE;
+	m_nextBodyState = STATE::IDLE;
 }
 
 void CharacterScript::ControlCCTRotation(float dt, float angleSpeed)
@@ -298,12 +333,21 @@ void CharacterScript::ControlMovement(float dt)
 
 	if (m_currentBodyState == STATE::CLIMBING)
 	{
-		if (Input()->IsKeyPressed(KEYBOARD::SPACE))
+		if (Input()->IsKeyDown(KEYBOARD::SPACE))
 		{
-			m_controller->SetGravity(GetScene()->GetPhysicsSystem()->GetGravity());
-			m_currentBodyState = STATE::IDLE;
-			m_nextBodyState = STATE::IDLE;
-			m_controller->Move(m_currentClimbingBar->GetCommittedGlobalTransform().Forward().Normal() * 5.0f);
+			if (Input()->IsKeyDown('S'))
+			{
+				m_controller->SetGravity(GetScene()->GetPhysicsSystem()->GetGravity());
+				//m_currentBodyState = STATE::IDLE;
+				//m_nextBodyState = STATE::IDLE;
+				TimeoutTransitingBodyState(STATE::IDLE, 0.2f);
+				//m_controller->Move(m_currentClimbingBar->GetCommittedGlobalTransform().Forward().Normal() * 5.0f);
+				m_lastExpectedMovingDir = m_characterForward;
+			}
+			else
+			{
+				PlayAnimClimbUp(dt);
+			}
 		}
 	}
 }
@@ -790,13 +834,15 @@ void CharacterScript::PlayAnimJumpFromRunning(float dt, const SharedPtr<Animatio
 
 			//m_controller->CCTSetAdditionRotationEnabled(true);
 			m_controller->CCTApplyVelocity(/*m_characterForward * 6.0f +*/  Vec3(0, jumpUpVelocityLength, 0));
+
+			StartJumpingToClimpingUpdate();
 		}
 	);
 
 	//const float reachedTopTime = 0.377f + transitTime;
 	const float reachedTopTime = animReachedTopTime + transitTime;
 
-	SetTimeout(reachedTopTime,
+	m_prepareFallingUpdateActions[0] = SetTimeout(reachedTopTime,
 		[&]()
 		{
 			auto srcPlayer = dynamic_cast<AnimPlayerLayer*>(m_character.Transit0->GetInput());
@@ -808,7 +854,7 @@ void CharacterScript::PlayAnimJumpFromRunning(float dt, const SharedPtr<Animatio
 		}
 	);
 
-	SetTimeout(reachedTopTime - 0.15f,
+	m_prepareFallingUpdateActions[1] = SetTimeout(reachedTopTime - 0.15f,
 		[&]()
 		{
 			m_character.Transit0->FadeTo(AnimTransitLayer::TransitDirection::FORWARD, 0.6f, m_character.Animations.FallIdle, -1, -1);
@@ -817,10 +863,13 @@ void CharacterScript::PlayAnimJumpFromRunning(float dt, const SharedPtr<Animatio
 
 	m_currentMovingSpeed = 0.0f;
 	float t0 = jumpUpVelocityLength / g.Length() + transitTime;
-	TimeoutTransitingBodyState(STATE::FALL, t0);
-	SetTimeout(t0,
+	//TimeoutTransitingBodyState(STATE::FALL, t0);
+	m_prepareFallingUpdateActions[2] = SetTimeout(t0,
 		[&]()
 		{
+			m_nextBodyState = STATE::FALL;
+			m_currentBodyState = STATE::FALL;
+
 			m_actionExecution->RunAction(
 				m_fallingUpdateAction = ActionRepeatUntil::New(
 					ActionCallback::New(
@@ -854,10 +903,12 @@ void CharacterScript::PlayAnimJumpFromIdle(float dt)
 			m_nextBodyState = STATE::JUMP;
 			m_currentBodyState = STATE::JUMP;
 			m_controller->CCTApplyVelocity(/*m_characterForward * 6.0f +*/  Vec3(0, jumpUpVelocityLength, 0));
+
+			StartJumpingToClimpingUpdate();
 		}
 	);
 
-	SetTimeout(m_character.Animations.IdleJumpUp->GetDuration() + transitTime - 0.2f,
+	m_prepareFallingUpdateActions[0] = SetTimeout(m_character.Animations.IdleJumpUp->GetDuration() + transitTime - 0.2f,
 		[&]()
 		{
 			m_character.Transit0->FadeTo(AnimTransitLayer::TransitDirection::FORWARD, 0.4f, m_character.Animations.FallIdle, -1, -1);
@@ -866,11 +917,13 @@ void CharacterScript::PlayAnimJumpFromIdle(float dt)
 
 	m_currentMovingSpeed = 0.0f;
 	float t0 = jumpUpVelocityLength / g.Length() + transitTime;
-	t0 = std::max(t0, m_character.Animations.IdleJumpUp->GetDuration() + transitTime);
-	TimeoutTransitingBodyState(STATE::FALL, t0);
-	SetTimeout(t0,
+	t0 = std::max(t0, m_character.Animations.IdleJumpUp->GetDuration() - 0.533f + transitTime) + 0.533f;
+	//TimeoutTransitingBodyState(STATE::FALL, t0);
+	m_prepareFallingUpdateActions[1] = SetTimeout(t0,
 		[&]()
 		{
+			m_nextBodyState = STATE::FALL;
+			m_currentBodyState = STATE::FALL;
 			m_actionExecution->RunAction(
 				m_fallingUpdateAction = ActionRepeatUntil::New(
 					ActionCallback::New(
@@ -922,24 +975,6 @@ void CharacterScript::FallingUpdate(float dt)
 	);
 
 	//std::cout << "groundCount: " << m_controller->CCTGetCollisionPlanes().groundCount << "\n";
-
-	{
-		auto transform = m_controller->GetGameObject()->GetCommittedGlobalTransform();
-		transform.Position() += transform.Forward().Normal() * (CharacterScript_CLIMBING_QUERY_BOX_SIZE / 2.0f);
-		m_actionExecution->RunAction(
-			Physics()->Overlap(
-				[&](const ActionPhysicsOverlap* action, const PhysicsOverlapResult& result)
-				{
-					if (!action->HitOrTouchAnything())
-					{
-						return;
-					}
-					FallingToClimbingUpdate(GetScene()->Dt(), action, result);
-				},
-				m_climbingQueryShape.get(), Transform::FromTransformMatrix(transform), m_fallingSweepFilter
-			)
-		);
-	}
 
 	auto startPosition = start.Position();
 	auto pos = start.Position();
@@ -1240,6 +1275,8 @@ void CharacterScript::PlayAnimSoftLanding(float dt, float dY)
 			m_fallingUpdateAction = nullptr;
 
 			m_landingTransitAction = nullptr;
+
+			StopJumpingToClimbingUpdate();
 		}
 	);
 }
@@ -1301,8 +1338,23 @@ void CharacterScript::PlayAnimFalling(float dt)
 	);
 }
 
-void CharacterScript::StopFalling()
+void CharacterScript::StopJumpingOrFalling()
 {
+	for (auto& a : m_prepareFallingUpdateActions)
+	{
+		if (a && m_actionExecution->Contains(a))
+		{
+			m_actionExecution->StopAction(a);
+			a = nullptr;
+		}
+	}
+
+	auto srcPlayer = dynamic_cast<AnimPlayerLayer*>(m_character.Transit0->GetInput());
+	if (srcPlayer)
+	{
+		srcPlayer->SetEnableRootMotion(true, true, true);
+	}
+
 	if (m_fallingUpdateAction)
 	{
 		m_actionExecution->StopAction(m_fallingUpdateAction);
@@ -1325,13 +1377,6 @@ GameObject* CharacterScript::GetClimbingBar(const PhysicsOverlapResult& result)
 		auto& global = obj->GetCommittedGlobalTransform();
 		auto& barPos = global.Position();
 
-		Plane pForward = Plane(cctOrigin, cctForward);
-		if (pForward.SideOf(barPos) < 0)
-		{
-			// get the climbing bar that is forward to cct
-			return;
-		}
-
 		auto bar = obj->GetComponentRaw<ClimbingBar>();
 		auto halfDistance = bar->GetHalfDistance();
 
@@ -1344,8 +1389,15 @@ GameObject* CharacterScript::GetClimbingBar(const PhysicsOverlapResult& result)
 			bool isPointInsideBar = (barPos - point).Length2() <= halfDistance * halfDistance;
 			if (isPointInsideBar)
 			{
-				auto d2 = (cctOrigin - point).Length2();
-				if (nearestDist2 > d2)
+				auto v = point - cctOrigin;
+				if (cctForward.Dot(v.Normal()) < 0.5f)
+				{
+					// get the climbing bar that is forward to cct
+					return;
+				}
+
+				auto d2 = v.Length2();
+				if (d2 <= (1.0f * 1.0f) && nearestDist2 > d2)
 				{
 					climbingBar = obj;
 					nearestDist2 = d2;
@@ -1385,21 +1437,26 @@ GameObject* CharacterScript::GetClimbingBar(const PhysicsOverlapResult& result)
 	return climbingBar;
 }
 
-void CharacterScript::FallingToClimbingUpdate(float dt, const ActionPhysicsOverlap* action, const PhysicsOverlapResult& result)
+void CharacterScript::JumpngToClimbingUpdate(float dt, const ActionPhysicsOverlap* action, const PhysicsOverlapResult& result)
 {
-	if (m_currentBodyState != STATE::FALL || IsAnimTransiting())
+	if ((m_currentBodyState != STATE::FALL
+		&& m_currentBodyState != STATE::CLIMBING
+		&& m_currentBodyState != STATE::TRANSIT_TO_CLIMBING
+		&& m_currentBodyState != STATE::JUMP
+		) || IsAnimTransiting())
 	{
 		return;
 	}
 
 	//bool isClimbable = false;
 	m_currentClimbingBar = GetClimbingBar(result);
-	if (m_currentClimbingBar)
+	if (m_currentClimbingBar && m_currentBodyState != STATE::TRANSIT_TO_CLIMBING && m_currentBodyState != STATE::CLIMBING)
 	{
-		StopFalling();
+		StopJumpingOrFalling();
+		StopJumpingToClimbingUpdate();
 
-		m_currentBodyState = STATE::CLIMBING;
-		m_nextBodyState = STATE::CLIMBING;
+		m_currentBodyState = STATE::TRANSIT_TO_CLIMBING;
+		m_nextBodyState = STATE::TRANSIT_TO_CLIMBING;
 
 		auto& pos = m_currentClimbingBarAnchorPoint;//m_currentClimbingBar->GetCommittedGlobalTransform().Position();
 		auto normal = m_currentClimbingBar->GetCommittedGlobalTransform().Forward().Normal();
@@ -1409,35 +1466,225 @@ void CharacterScript::FallingToClimbingUpdate(float dt, const ActionPhysicsOverl
 		auto h = cctCapsule->CCTGetHeight();
 		auto dG = cctCapsule->GetGravity().Normal();
 
-		const auto legLengthHorizontal = 0.5f;
-		const auto legLengthVertical = 0.2f;
+		const auto legLengthHorizontal = 0.17f;
+		const auto legLengthVertical = 0.32f;
 
+		auto& srcPos = m_controller->GetGameObject()->GetCommittedGlobalTransform().Position();
 		auto destPos = pos + normal * (r + legLengthHorizontal) + dG * (h / 2.0f + r + legLengthVertical);
 
 		m_controller->SetGravity({ 0,0,0 });
 		m_controller->CCTSetVelocity({ 0,0,0 });
+
+		const auto moveSpeed = 5.0f;
+		const auto rotSpeed = 2.0f * PI;
+
+		auto length = (srcPos - destPos).Length();
+		auto Tm = length / moveSpeed + 0.01f;
+
+		Tm = std::clamp(Tm, 0.25f, 0.6f);
+
+		m_climbingToBarPrevPos = srcPos;
 		m_actionExecution->RunAction(
 			ActionInterpolation<Vec3>::New(
 				{
-					{ m_controller->GetGameObject()->GetCommittedGlobalTransform().Position(), 0 },
-					{ destPos, 0.8f }
+					{ srcPos, 0 },
+					{ destPos, Tm }
 				},
-				[&, pos, destPos](const Vec3& value)
+				[&](const Vec3& value)
 				{
-					auto& cctPos = m_controller->GetGameObject()->GetCommittedGlobalTransform().Position();
+					auto& cctPos = m_climbingToBarPrevPos;
 					auto d = value - cctPos;
 					m_controller->Move(d);
+					m_climbingToBarPrevPos = value;
 
-					auto debugGraphics = Graphics::Get()->GetDebugGraphics();
-					debugGraphics->DrawRay(pos, destPos - pos);
+					//auto debugGraphics = Graphics::Get()->GetDebugGraphics();
+					//debugGraphics->DrawRay(pos, destPos - pos);
 				}
 			)
+		);
+
+		auto& srcRot = m_controller->CCTGetRotation();
+		Quaternion destRot = Mat4(
+			Vec4(-Vec3::UP.Cross(normal).Normal(), 0.0f),
+			Vec4(Vec3::UP, 0.0f),
+			Vec4(-normal, 0.0f),
+			Vec4(0, 0, 0, 1)
+		);
+
+		auto angle = AngularDistance(destRot, srcRot);
+		auto Ta = angle / rotSpeed + 0.01f;
+
+		Ta = std::clamp(Ta, 0.25f, 0.6f);
+
+		m_actionExecution->RunAction(
+			ActionInterpolation<Quaternion>::New(
+				{
+					{ srcRot, 0 },
+					{ destRot, Ta }
+				},
+				[&](const Quaternion& value)
+				{
+					m_controller->CCTSetRotation(value);
+				}
+			)
+		);
+
+		auto animTransitTime = std::max(Ta, Tm);
+		m_character.Transit0->FadeTo(AnimTransitLayer::TransitDirection::FORWARD, animTransitTime, m_character.Animations.HangIdle, -1, -1);
+
+		SetTimeout(animTransitTime + MIN_FRAMETIME,
+			[&]() 
+			{
+				m_currentBodyState = STATE::CLIMBING;
+				m_nextBodyState = STATE::CLIMBING;
+			}
 		);
 	}
 }
 
 void CharacterScript::ClimbingUpdate(float dt)
 {
+}
+
+void CharacterScript::StartJumpingToClimpingUpdate()
+{
+	assert(m_jumpingToClimbingUpdateAction == nullptr);
+	m_actionExecution->RunAction(
+		m_jumpingToClimbingUpdateAction = ActionRepeatUntil::New(
+			ActionCallback::New(
+				[&]()
+				{
+					auto transform = m_controller->GetGameObject()->GetCommittedGlobalTransform();
+					transform.Position() += transform.Forward().Normal() * (CharacterScript_CLIMBING_QUERY_BOX_SIZE / 2.0f);
+					m_actionExecution->RunAction(
+						Physics()->Overlap(
+							[&](const ActionPhysicsOverlap* action, const PhysicsOverlapResult& result)
+							{
+								if (!action->HitOrTouchAnything())
+								{
+									return;
+								}
+								JumpngToClimbingUpdate(GetScene()->Dt(), action, result);
+							},
+							m_climbingQueryShape.get(), Transform::FromTransformMatrix(transform), m_fallingSweepFilter
+						)
+					);
+				}
+			),
+			nullptr
+		)
+	);
+}
+
+void CharacterScript::StopJumpingToClimbingUpdate()
+{
+	if (m_jumpingToClimbingUpdateAction)
+	{
+		m_actionExecution->StopAction(m_jumpingToClimbingUpdateAction);
+		m_jumpingToClimbingUpdateAction = nullptr;
+	}
+}
+
+void CharacterScript::PlayAnimClimbUp(float dt)
+{
+	auto animTransitTime = 0.1f;
+
+	m_character.Transit0->FadeTo(AnimTransitLayer::TransitDirection::FIXED, animTransitTime, m_character.Animations.HangClimbUpToCrouch, -1, -1);
+	m_animator->SetForwardCCT(m_controller, m_characterUp);
+
+	auto cct = (CharacterControllerCapsule*)m_controller;
+	m_cctOriginalHeight = cct->CCTGetHeight();
+	m_cctOriginalRadius = cct->CCTGetRadius();
+
+	cct->CCTSetHeight(0.0f);
+	cct->CCTSetRadius(0.1f);
+
+	m_currentBodyState = STATE::CLIMBING_UP;
+	m_nextBodyState = STATE::CLIMBING_UP;
+
+	SetTimeout(m_character.Animations.HangClimbUpToCrouch->GetDuration() + animTransitTime - MIN_FRAMETIME * 2.0f,
+		[&]()
+		{
+			m_animator->SetForwardCCT(nullptr);
+
+			constexpr static float restoreTime = 0.3f;
+
+			m_character.Transit0->FadeTo(AnimTransitLayer::TransitDirection::FORWARD, restoreTime, m_character.Animations.IdleCarefully, -1, -1);
+
+			m_actionExecution->RunAction(
+				ActionSequence::New(
+					{
+						ActionDelayNTicks::New(2),
+						ActionCallback::New(
+							[&]()
+							{
+								PlayAnimClimbUpRestoreCCTDimensions(restoreTime);
+							}
+						)
+					}
+				)
+			);
+		}
+	);
+}
+
+void CharacterScript::PlayAnimClimbUpRestoreCCTDimensions(float restoreTime)
+{
+	//m_character.SrcPlayer0->SetEnabled(false);
+	//m_character.SrcPlayer1->SetEnabled(false);
+
+	auto cct = (CharacterControllerCapsule*)m_controller;
+	m_actionExecution->RunAction(
+		ActionInterpolation<float>::New(
+			{
+				{ cct->CCTGetHeight(), 0.0f},
+				{ m_cctOriginalHeight, restoreTime }
+			},
+			[&, cct](const float& value)
+			{
+				cct->CCTSetHeight(value);
+			}
+		)
+	);
+
+	m_actionExecution->RunAction(
+		ActionInterpolation<float>::New(
+			{
+				{ cct->CCTGetRadius(), 0.0f },
+				{ m_cctOriginalRadius, restoreTime }
+			},
+			[&, cct](const float& value)
+			{
+				cct->CCTSetRadius(value);
+			}
+		)
+	);
+
+	m_climbingToBarPrevPos.y = m_controller->GetGameObject()->GetCommittedGlobalTransform().Position().y;
+	auto oriY = m_cctOriginalRadius + m_cctOriginalHeight / 2.0f + m_controller->CCTGetContactOffset();
+	oriY += m_currentClimbingBar->GetCommittedGlobalTransform().Position().y - 0.05f;
+	m_actionExecution->RunAction(
+		ActionInterpolation<float>::New(
+			{
+				{ m_climbingToBarPrevPos.y, 0.0f},
+				{ oriY, restoreTime }
+			},
+			[&](const float& value)
+			{
+				auto v = value - m_climbingToBarPrevPos.y;
+				m_controller->Move(Vec3(0, v, 0));
+				m_climbingToBarPrevPos.y = value;
+			}
+		)
+	);
+
+	SetTimeout(restoreTime,
+		[&]()
+		{
+			m_controller->SetGravity(GetScene()->GetPhysicsSystem()->GetGravity());
+			TimeoutTransitingBodyState(STATE::IDLE, MIN_FRAMETIME * 2.0f);
+		}
+	);
 }
 
 void CharacterScript::DeserializeFromJson(Serializer* serializer, const json& j)
